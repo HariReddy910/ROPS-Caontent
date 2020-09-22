@@ -1,0 +1,206 @@
+﻿@model ICollection<ResturantPOS.Models.Currency>
+
+<link href="~/Content/CurrencyRate.css" rel="stylesheet" />
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<!--web grid styles starts-->
+<style type="text/css">
+    /*styles for altering rows*/
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: #EAF2D3;
+        padding: 3px 7px 2px;
+    }
+    #BtnCatCreate:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+</style>
+
+
+
+<div class="container">
+    <h3>Currency details</h3>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <form class="form-horizontal">
+                <div class="form-group"style="margin-top: 15px;">
+                    <label for="inputtext3" class="col-sm-4 control-label">CurrencyCode:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="CurrencyCode" placeholder="Required CurrencyCode">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">CurrencyName:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="CurrencyName" placeholder="Required CurrencyName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Rate:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Rate" placeholder="Required Service Rate">
+                    </div>
+                </div>
+        
+                <button id="BtnCatCreate" type="button" class="btn btn-success" style="margin-left: 36%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Currency</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("CurrencyCode", style: "col2", format: @<text><span id="CurrencyCode" class="display-mode">@item.CurrencyCode</span>@Html.TextBox("CurrencyCode-Edit", (string)item.CurrencyCode, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Currency Name", style: "col2", format: @<text><span id="CurrencyName" class="display-mode">@item.CurrencyName</span>@Html.TextBox("CurrencyName-Edit", (string)item.CurrencyName, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Rate", style: "col2", format: @<text><span id="Rate" class="display-mode">@item.Rate</span> @Html.TextBox("Rate-Edit", (double)item.Rate, new { @class = "edit-mode form-control" })</text>),
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.CurrencyCode">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.CurrencyCode">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.CurrencyCode">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.CurrencyCode">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var CurrencyCode = tr.find('#CurrencyCode-Edit').val();
+                var CUR = new Object();
+                CUR.CurrencyCode = CurrencyCode;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/Currency/DeleteContact/',
+                    data: JSON.stringify(CUR),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var CurrencyCode = tr.find('#CurrencyCode-Edit').val();
+            var CurrencyName = tr.find('#CurrencyName-Edit').val();
+            var Rate = tr.find('#Rate-Edit').val();
+            var oldCurrencyCode = tr.find('#CurrencyCode').text();
+            
+
+            var CUR = new Object();
+            CUR.CurrencyCode = CurrencyCode;
+            CUR.CurrencyName = CurrencyName;
+            CUR.Rate = Rate;
+           
+
+            $.ajax({
+
+                type: "POST",
+                url: '/Currency/CurrencyUpdate/',
+                data: JSON.stringify({ oldCurrencyCode, CUR }),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#BtnCatCreate').on('click', function () {
+
+           
+            var CurrencyCode = $('#CurrencyCode').val();
+            var CurrencyName = $("#CurrencyName").val();
+            var Rateins = $("#Rate").val();
+          
+
+
+            var CurIns = new Object();
+            CurIns.CurrencyCode = CurrencyCode;
+            CurIns.CurrencyName = CurrencyName;
+            CurIns.Rate = Rateins;
+
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/Currency/SaveCurrency/',
+                data: JSON.stringify(CurIns),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+
+
+
+
+

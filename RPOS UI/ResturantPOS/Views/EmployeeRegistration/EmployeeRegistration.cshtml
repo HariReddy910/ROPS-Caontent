@@ -1,0 +1,378 @@
+﻿@model ICollection<ResturantPOS.Models.EmployeeRegistration>
+
+
+<link href="~/EmployeeRegistration.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<!--web grid styles starts-->
+<style type="text/css">
+    /*styles for altering rows*/
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: #EAF2D3;
+        padding: 3px 7px 2px;
+    }
+
+    #imagePreview {
+        width: 180px;
+        height: 180px;
+        background-position: center center;
+        background-size: cover;
+        -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+        display: inline-block;
+    }
+</style>
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="~/Content/DeliveryPerson.css" rel="stylesheet" />
+</head>
+<div class="container">
+<div class="row">
+    <div id="imagePreview"></div>
+    <input id="uploadFile" type="file" name="image" class="img" />
+    <input id="uploadFile1" type="button"  value="Upload..." />
+<div class="col-md-6 col-xs-12 ">
+<div class="form-group">
+<label class="form-group-label">Empyloee ID : </label>
+<input type="text"  id="EmployeeID"class="form-group-box">
+</div>
+<div class="form-group">
+<label class="form-group-label">Empyloee Name : </label>
+<input type="text" id="EmployeeName" class="form-group-box">
+</div>
+<div class="form-group">
+<label class="form-group-label">Address : </label>
+<input type="text"  id="Address"class="form-group-box">
+</div>
+<div class="form-group">
+<label class="form-group-label">City : </label>
+<input type="text" id="City" class="form-group-box">
+</div>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="form-group">
+<label class="form-group-label">Contact Number : </label>
+<input type="text" id="ContactNo"class="form-group-box">
+</div>
+<div class="form-group">
+<label class="form-group-label">Email : </label>
+<input type="text"  id="Email" class="form-group-box">
+</div>
+<div class="form-group">
+<label class="form-group-label">Jioning Date : </label>
+<input type="date" id="DateOfJoining" class="form-group-box">
+</div>
+<div class="form-group">
+<label class="form-group-label">Is Active : </label>
+<input type="checkbox" id="Active" class="form-group-checkbox" style="margin-left:10px;">
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-xs-12 col-md-offset-2">
+<button id="BtnCatCreate"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i><strong class="button-txt">Save</strong></button>
+</div>
+</div>
+</div>
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Category List</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("EmpId", style: "col2", format: @<text><span id="EmpId" class="display-mode">@item.EmpId</span>@Html.TextBox("EmpId-Edit", (int)item.EmpId, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("EmployeeID", style: "col2", format: @<text><span id="EmployeeID" class="display-mode">@item.EmployeeID</span>@Html.TextBox("EmployeeID-Edit", (string)item.EmployeeID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("EmployeeName", style: "col2", format: @<text><span id="EmployeeName" class="display-mode">@item.EmployeeName</span> @Html.TextBox("EmployeeName-Edit", (string)item.EmployeeName, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Address", style: "col2", format: @<text><span id="Address" class="display-mode">@item.Address</span>@Html.TextBox("Address-Edit", (string)item.Address, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("City", style: "col2", format: @<text><span id="City" class="display-mode">@item.City</span>@Html.TextBox("City-Edit", (string)item.City, new { @class = "edit-mode form-control" })</text>),
+                  grid.Column("ContactNo", style: "col2", format: @<text><span id="ContactNo" class="display-mode">@item.ContactNo</span>@Html.TextBox("ContactNo-Edit", (string)item.ContactNo, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Email", style: "col2", format: @<text><span id="Email" class="display-mode">@item.Email</span>@Html.TextBox("Email-Edit", (string)item.Email, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("DateOfJoining", style: "col2", format: @<text><span id="DateOfJoining" class="display-mode">@item.DateOfJoining</span> @Html.TextBox("DateOfJoining-Edit", (DateTime)item.DateOfJoining,  new { @class = "edit-mode form-control", @type="date"})</text>),
+            grid.Column("Active", style: "col2", format: @<text><span id="Active" class="display-mode">@item.Active</span><b class = "edit-mode form-control">Active</b><input type="checkbox" id="Active" class="form-group-checkbox edit-mode" style="margin-left:10px;"></text>),
+            grid.Column("Photo", style: "col2", format: @<text><img src="~/Images/@item.Photo" width="100" height="100"  class="display-mode"/><input id="uploadFile" type="file" name="image" class="img edit-mode form-control" />
+                                                                                                                            <input id="uploadFile1" type="button" value="Upload..." class="edit-mode form-control uploadFile1" />
+ </text>),
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.EmpId">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.EmpId">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.EmpId">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.EmpId">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#EmpId-Edit').val();
+                var EMP = new Object();
+                EMP.EmpId = ID;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/EmployeeRegistration/DeleteEmployeeRegistration/',
+                    data: JSON.stringify(EMP),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#EmpId-Edit').val();
+            var EmployeeID = tr.find('#EmployeeID-Edit').val();
+            var EmployeeName = tr.find('#EmployeeName-Edit').val();
+            var Address = tr.find('#Address-Edit').val();
+            var City = tr.find('#City-Edit').val();
+            var ContactNo = tr.find('#ContactNo-Edit').val();
+            var Email = tr.find('#Email-Edit').val();
+            var DateOfJoining = tr.find('#DateOfJoining-Edit').val();
+            if (tr.find('#Active').is(':checked')) {
+                var Activeins = 'Active';
+            } else {
+                var Activeins = 'Inactive';
+            }
+            var Photo2 = tr.find('input[type=file]').val().split('\\').pop();
+
+
+
+            var EMP = new Object();
+            EMP.EmpId = ID;
+            EMP.EmployeeID = EmployeeID;
+            EMP.EmployeeName = EmployeeName;
+            EMP.Address = Address;
+            EMP.City = City;
+            EMP.ContactNo = ContactNo;
+            EMP.Email = Email;
+            EMP.DateOfJoining = DateOfJoining;
+            EMP.Active = Activeins;
+            EMP.Photo = Photo2
+            $.ajax({
+                type: "POST",
+                url: '/EmployeeRegistration/EmployeeRegistrationUpdate/',
+                data: JSON.stringify(EMP),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+
+        $('.uploadFile1').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            // Checking whether FormData is available in browser  
+            if (window.FormData !== undefined) {
+
+                var fileUpload = tr.find("#uploadFile").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object  
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object  
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+                // Adding one more key to FormData object  
+                // fileData.append('username', ‘Manas’);
+
+                $.ajax({
+                    url: '/EmployeeRegistration/UploadFiles',
+                    type: "POST",
+                    contentType: false, // Not to set any content header  
+                    processData: false, // Not to process data  
+                    data: fileData,
+                    success: function (result) {
+                        alert(result);
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("FormData is not supported.");
+            }
+        });
+
+
+        
+        $('#BtnCatCreate').on('click', function () {
+
+            var filename = $('input[type=file]').val().split('\\').pop();
+             
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#EmpId').val();
+                var EmployeeIDins = $("#EmployeeID").val();
+                var EmployeeNameins = $("#EmployeeName").val();
+                var Addressins = $("#Address").val();
+                var Cityins = $("#City").val();
+                var ContactNoins = $("#ContactNo").val();
+                var Emailins = $("#Email").val();
+                var DateOfJoiningins = $("#DateOfJoining").val();
+                
+                if ($('#Active').is(':checked')) {
+                    var Activeins ='Active' ;
+                } else 
+                {
+                    var Activeins = 'Inactive';
+                 }
+                var EMPIns = new Object();
+                EMPIns.EmpId = ID;
+                EMPIns.EmployeeID = EmployeeIDins;
+                EMPIns.EmployeeName = EmployeeNameins;
+                EMPIns.Address = Addressins;
+                EMPIns.City = Cityins;
+                EMPIns.ContactNo = ContactNoins;
+                EMPIns.Email = Emailins;
+                EMPIns.DateOfJoining = DateOfJoiningins;
+                EMPIns.Active = Activeins;
+                EMPIns.Photo = filename;
+                
+                $.ajax({
+                    type: "POST",
+                    url: '/EmployeeRegistration/SaveEmployeeRegistration/',
+                    data: JSON.stringify({ EMPIns: EMPIns }),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                    }
+                });
+                window.location.reload();
+            });
+        
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#uploadFile").on("change", function () {
+            var files = !!this.files ? this.files : [];
+            if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+            if (/^image/.test(files[0].type)) { // only image file
+                var reader = new FileReader(); // instance of the FileReader
+                reader.readAsDataURL(files[0]); // read the local file
+
+                reader.onloadend = function () { // set image data as background of div
+                    $("#imagePreview").css("background-image", "url(" + this.result + ")");
+                }
+            }
+        });
+    });
+
+    
+    $(document).ready(function () {
+        $('#uploadFile1').click(function () {
+
+            // Checking whether FormData is available in browser  
+            if (window.FormData !== undefined) {
+
+                var fileUpload = $("#uploadFile").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object  
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object  
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+                // Adding one more key to FormData object  
+               // fileData.append('username', ‘Manas’);
+
+                $.ajax({
+                    url: '/EmployeeRegistration/UploadFiles',
+                    type: "POST",
+                    contentType: false, // Not to set any content header  
+                    processData: false, // Not to process data  
+                    data: fileData,
+                    success: function (result) {
+                        alert(result);
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("FormData is not supported.");
+            }
+        });
+    });
+   
+</script>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "DeliveryPerson";
+}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="~/Content/DeliveryPerson.css" rel="stylesheet" />
+</head>
+
+<h3>DeliveryPerson</h3>
+<div class="container" style="margin-top: 13px;">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Employee ID</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="EmployeeID" placeholder="Required Employee ID">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Emp Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Date" placeholder="Required Employee Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Address</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" rows="3" id="Address"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">City</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="City" placeholder="Required City">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Contact No</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="ContactNo" placeholder="Required Contact No">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">E-Mail</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Email" placeholder="Required Email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Date Of Joining</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="DateOfJoining">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label for="text" class="col-sm-4 control-label">Status</label>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Active
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button id="controls-inner"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i><strong class="button-txt">Save</strong></button>
+            </form>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>

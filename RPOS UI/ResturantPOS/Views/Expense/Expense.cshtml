@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Expense";
+}
+
+<h2>Expense</h2>
+
+}
+
+
+
+<div id="ExpenseCreat"></div>
+<div id="ExpenseList"></div>
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $.ajax({
+               url: '/Expense/ExpenseCreat',
+                contentType: 'application/html; charset=utf-8',
+                type: 'GET',
+                datatype: 'html',
+                cache: false,
+
+                success:function (result) {
+
+
+                    $('#ExpenseCreat').html(result);
+                }
+                //.error(function (xhr, status) {
+                //    alert(status);
+            })
+
+
+       })
+
+
+
+       $(document).ready(function () {
+           $.ajax({
+               url: '/Expense/ExpenseList',
+               contentType: 'application/html; charset=utf-8',
+               type: 'GET',
+               datatype: 'html',
+               cache: false,
+
+               success: function (result) {
+
+
+                   $('#ExpenseList').html(result);
+               }
+               //.error(function (xhr, status) {
+               //    alert(status);
+           })
+
+
+        })
+
+
+
+
+
+
+
+    </script>
+}
+
+
+
+
+<h2>CurrencyRate</h2>
+
+

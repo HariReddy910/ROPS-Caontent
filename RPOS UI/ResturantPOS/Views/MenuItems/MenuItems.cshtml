@@ -1,0 +1,219 @@
+﻿
+@model ICollection<ResturantPOS.Models.Dish>
+ 
+
+<head>
+    <link href="~/Content/ResurantInfo.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+    <h4>Menu Items</h4>
+
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-2 control-label">ItemName:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="DishName" placeholder="Required Item Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-2 control-label">Category:</label>
+                    <div class="col-sm-10">
+                        @Html.DropDownList("Type", (IEnumerable<SelectListItem>)ViewBag.Type, "--Select--", new { @class = "form-control", @Required = true })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-2 control-label">Kitchen:</label>
+                    <div class="col-sm-10">
+                        @Html.DropDownList("Kichen", (IEnumerable<SelectListItem>)ViewBag.Kichen, "--Select--", new { @class = "form-control", @Required = true })
+                        @*<select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>*@
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-2 control-label">Rate:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Rate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-2 control-label">Discount%:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Discount">
+                    </div>
+                </div>
+                <button type="button" id="BtnCatCreate" class="btn btn-success" style="margin-left: 29%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+
+
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4>Menu Items</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+            grid.Columns(
+                grid.Column("Item Name", style: "col2", format: @<text><span id="DishName" class="display-mode display-mode">@item.DishName</span>@Html.TextBox("DishName-Edit", (string)item.DishName, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Category ", style: "col2", format: @<text><span id="Category" class="display-mode">@item.Category</span>@Html.DropDownList("Type", (IEnumerable<SelectListItem>)ViewBag.Type, new { @class = "edit-mode form-control", @Required = true })</text>),
+            grid.Column("Kitchen", style: "col2", format: @<text><span id="Kitchen" class="display-mode">@item.Kitchen</span>@Html.DropDownList("Kichen", (IEnumerable<SelectListItem>)ViewBag.Kichen, new { @class = "edit-mode form-control", @Required = true })</text>),
+            grid.Column("Rate", style: "col2", format: @<text><span id="Rate" class="display-mode">@item.Rate</span>@Html.TextBox("Rate-Edit", (double)item.Rate, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Discount", style: "col2", format: @<text><span id="Discount" class="display-mode">@item.Discount</span>@Html.TextBox("Discount-Edit", (double)item.Discount, new { @class = "edit-mode form-control" })</text>),
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.DishName">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.DishName">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.DishName">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.DishName">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var DishName = tr.find('#DishName-Edit').val();
+                var dish = new Object();
+                dish.DishName = DishName;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/MenuItems/DeleteDish/',
+                    data: JSON.stringify(dish),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var DishName = tr.find('#DishName-Edit').val();
+            var Category = tr.find('#Type').val();
+            var Kitchen = tr.find('#Kichen').val();
+            var Rate = tr.find('#Rate').val();
+            var Discount = tr.find('#Discount-Edit').val();
+            var DishName1 = tr.find('#DishName').text();
+            var dish = new Object();
+            dish.DishName1 = DishName;
+            dish.Category = Category;
+            dish.Kitchen = Kitchen;
+            dish.Rate = Rate;
+            dish.Discount = Discount;
+            dish.DishName2 = DishName1;
+
+            $.ajax({
+
+                type: "POST",
+                url: '/MenuItems/DishUpdate/',
+                data: JSON.stringify(dish),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#BtnCatCreate').on('click', function () {
+
+            var DishName = $('#DishName').val();
+            var Category = $('#Type').val();
+            var Kitchen = $('#Kichen').val();
+            var Rate = $('#Rate').val();
+            var Discount = $('#Discount').val();
+            
+            var dish = new Object();
+            dish.DishName = DishName;
+            dish.Category = Category;
+            dish.Kitchen = Kitchen;
+            dish.Rate = Rate;
+            dish.Discount = Discount;
+             
+
+            $.ajax({
+
+                type: "POST",
+                url: '/MenuItems/SaveDish/',
+                data: JSON.stringify(dish),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+
+
+
+
+
+

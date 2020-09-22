@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "AddMember";
+}
+
+<h2 style="text-align:center">Member Registration</h2>
+
+<link href="~/Content/AddMember.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container ">
+    <div class="row member">
+        
+        <div class="col-md-3" id="btnn">
+            
+        </div>
+
+        <!-- text boxs to enter the information-->
+        <div class="col-md-6">
+            <div class="form-text">
+                <label class="form-text-label">Member ID : </label> <input type="text" class="label-text-box">
+            </div>
+
+            <div class="form-text">
+                <label class="form-text-label">Member Name : </label> <input type="text" class="label-text-box">
+            </div>
+
+            <div class="form-text">
+                <label class="form-text-label">Address : </label> <input type="text" class="label-text-box">
+            </div>
+
+            <div class="form-text">
+                <label class="form-text-label">Contact Number : </label> <input type="text" class="label-text-box">
+            </div>
+
+            <div class="form-text">
+                <label class="form-text-label">Status : </label> <input type="checkbox" class="label-check-box"> <label class="form-text-lbl">Is Active</label> 
+            </div>
+            <div class="form-group" style="width: 246%;">
+                <label for="inputtext3" class="col-sm-2 control-label">Search By Member Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputtext3">
+                </div>
+            </div>
+        </div>
+
+        <!-- new save edit and delete buttons-->
+        <div class="col-md-3" id="controls">
+           
+            <button id="controls-inner"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i><strong class="txt">Reset</strong></button>
+            <button id="controls-inner"><i class="fa fa-file-excel-o fa-2x" aria-hidden="true"></i><strong class="txt">Export Excel</strong></button>
+            
+        </div>
+    </div>
+</div>

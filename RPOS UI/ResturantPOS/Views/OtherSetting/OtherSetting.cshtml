@@ -1,0 +1,268 @@
+﻿
+@model ICollection<ResturantPOS.Models.OtherSetting>
+                      <head>
+                          <meta name="viewport" content="width=device-width, initial-scale=1">
+                          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+                          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                          <style>
+                              input[type=checkbox] {
+                                  margin-left: 184px;
+                              }
+                          </style>
+                          
+
+                      </head>
+                      <body>
+                          <div class="container">
+                              <h3>Orther Settings</h3>
+                              <div class="row">
+                                  <div class="col-md-3">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <form class="form-horizontal">
+                                          <div class="form-group">
+                                              <label for="text" class="col-sm-4 control-label">Parcel Charges</label>
+                                              <div class="col-sm-8">
+                                                  <input type="text" class="form-control" id="ParcelCharges" placeholder="Required ParcelCharges">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="text" class="col-sm-4 control-label">Home Delivery Charges</label>
+                                              <div class="col-sm-8">
+                                                  <input type="text" class="form-control" id="HomeDeliveryCharges" placeholder="Required HomeDeliveryCharges">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="text" class="col-sm-4 control-label">Service Tax</label>
+                                              <div class="col-sm-8">
+                                                  <input type="text" class="form-control" id="ServiceTax" placeholder="Required Service Tax">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="text" class="col-sm-4 control-label">VAT</label>
+                                              <div class="col-sm-8">
+                                                  <input type="text" class="form-control" id="VAT" placeholder="Required VAT">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="text" class="col-sm-4 control-label">ServiceCharges</label>
+                                              <div class="col-sm-8">
+                                                  <input type="text" class="form-control" id="ServiceCharges" placeholder="Required ServiceCharges">
+                                              </div>
+                                          </div>
+                                          
+                                              <label>Print Kitchen Order Ticket:</label><br>
+                                          <div class="checkbox" style="margin-left: 200px;">
+                                              <form action="" style="margin-left: 284px;">
+                                                  <input type="checkbox" id="TA" name="default" value="Bike">Takeaway<br>
+                                                  <input type="checkbox" id="HD" name="enabled" value="Car">Home Delivery<br>
+                                                  <input type="checkbox" id="EB" name="default" value="Bike">Express Billing<br>
+                                                  <input type="checkbox" id="KG" name="enabled" value="Car">In Cash Counter<br>
+                                                  <input type="checkbox" id="CashDrawer" name="enabled" value="Car">Cash Drawer
+                                              </form>
+                                          </div>
+                                              <button id="BtnCatCreate" class="button button1"><i class="fa fa-floppy-o" aria-hidden="true"></i>SAVE</button>
+                                          
+                                              
+
+                                  </div>
+                                  <div class="col-md-3">
+                                  </div>
+                              </div>
+                          </div>
+                      </body>
+
+
+
+
+
+        <div style="width:100%;float:left;padding-bottom:50px;">
+            <h4>Other Setting</h4>
+            @{
+                if (Model != null)
+                {
+                    var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                    grid.Pager(WebGridPagerModes.NextPrevious);
+
+                    @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("NO", style: "col2", format: @<text><span id="ID" class="display-mode">@item.ID</span>@Html.TextBox("Cat-Edit", (int)item.ID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ParcelCharges", style: "col2", format: @<text><span id="ParcelCharges" class="display-mode">@item.ParcelCharges</span>@Html.TextBox("ParcelCharges-Edit", (decimal)item.ParcelCharges, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("HomeDeliveryCharges", style: "col2", format: @<text><span id="HomeDeliveryCharges" class="display-mode">@item.HomeDeliveryCharges</span> @Html.TextBox("HomeDeliveryCharges-Edit", (decimal)item.HomeDeliveryCharges, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ServiceTax", style: "col2", format: @<text><span id="ServiceTax" class="display-mode">@item.ServiceTax</span>@Html.TextBox("ServiceTax-Edit", (decimal)item.ServiceTax, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("VAT", style: "col2", format: @<text><span id="VAT" class="display-mode">@item.VAT</span>@Html.TextBox("VAT-Edit", (decimal)item.VAT, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ServiceCharges", style: "col2", format: @<text><span id="ServiceCharges" class="display-mode">@item.ServiceCharges</span>@Html.TextBox("ServiceCharges-Edit", (decimal)item.ServiceCharges, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Take Away", style: "col2", format: @<text><span id="TA" class="display-mode">@item.TA</span> @Html.TextBox("TA-Edit", (string)item.TA, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Home Delivery", style: "col2", format: @<text><span id="HD" class="display-mode">@item.HD</span>@Html.TextBox("HD-Edit", (string)item.HD, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Express Billing", style: "col2", format: @<text><span id="EB" class="display-mode">@item.EB</span>@Html.TextBox("EB-Edit", (string)item.EB, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("", style: "col2", format: @<text><span id="KG" class="display-mode">@item.KG</span>@Html.TextBox("KG-Edit", (string)item.KG, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("CashDrawer", style: "col2", format: @<text><span id="CashDrawer" class="display-mode">@item.CashDrawer</span> @Html.TextBox("CashDrawer-Edit", (string)item.CashDrawer, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.ID">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.ID">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.ID">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.ID">Cancel</button>
+                    </div>
+            </text>)))
+                }
+            }
+        </div>
+
+        <script type="text/javascript">
+            initialize();
+
+            function initialize() {
+
+                $('.edit-mode').hide();
+
+                $('.edit-item').on('click', function () {
+                    $('.edit-mode').hide();
+                    $('.delete-mode').hide();
+                    $('.display-mode').show();
+                    var tr = $(this).parents('tr:first');
+                    tr.find('.edit-mode, .display-mode').toggle();
+                });
+                $('.cancel-item').on('click', function () {
+                    var tr = $(this).parents('tr:first');
+                    tr.find('.display-mode,.edit-mode').toggle();
+                });
+                $('.delete-item').on('click', function () {
+                    if (confirm("Are you sure to delete this contact?")) {
+                        var tr = $(this).parents('tr:first');
+                        var ID = tr.find('#Cat-Edit').val();
+                        var CAT = new Object();
+                        CAT.ID = ID;
+                        $.ajax({
+
+                            type: "POST",
+                            url: '/OtherSetting/DeleteContact/',
+                            data: JSON.stringify(CAT),
+                            contentType: "application/json;charset=utf-8",
+                            success: function (data, status, xhr) {
+
+                                window.location.reload();
+                            },
+                            error: function (xhr) {
+
+                                window.location.reload();
+                            }
+                        });
+                    }
+
+                });
+
+                $('.save-item').on('click', function () {
+                    var tr = $(this).parents('tr:first');
+                    var ID = tr.find('#Cat-Edit').val();
+                    var ParcelCharges = tr.find('#ParcelCharges-Edit').val();
+                    var HomeDeliveryCharges = tr.find('#HomeDeliveryCharges-Edit').val();
+                    var ServiceTax = tr.find('#ServiceTax-Edit').val();
+                    var VAT = tr.find('#VAT-Edit').val();
+                    var ServiceCharges = tr.find('#ServiceCharges-Edit').val();
+                    var TA = tr.find('#TA-Edit').val();
+                    var HD = tr.find('#HD-Edit').val();
+                    var EB = tr.find('#EB-Edit').val();
+                    var KG = tr.find('#KG-Edit').val()
+                    var CashDrawer = tr.find('#CashDrawer-Edit').val();
+
+
+                    var CAT_save = new Object();
+                    CAT_save.ID = ID;
+                    CAT_save.ParcelCharges = ParcelCharges;
+                    CAT_save.HomeDeliveryCharges = HomeDeliveryCharges;
+                    CAT_save.ServiceTax = ServiceTax;
+                    CAT_save.VAT = VAT;
+                    CAT_save.ServiceCharges = ServiceCharges;
+                    CAT_save.TA = TA;
+                    CAT_save.HD = HD;
+                    CAT_save.EB = EB;
+                    CAT_save.KG = KG;
+                    CAT_save.CashDrawer = CashDrawer;
+
+
+                    $.ajax({
+
+                        type: "POST",
+                        url: '/OtherSetting/OtherSettingUpdate/',
+                        data: JSON.stringify(CAT_save),
+                        contentType: "application/json;charset=utf-8",
+                        success: function (data, status, xhr) {
+
+                            window.location.reload();
+                        },
+                        error: function (xhr) {
+
+                            window.location.reload();
+                        }
+                    });
+
+                    window.location.reload();
+                    tr.find('.edit-mode, .display-mode').toggle();
+                });
+
+                $('#BtnCatCreate').on('click', function () {
+
+                    var tr = $(this).parents('tr:first');
+                    var ID = tr.find('#Cat').val();
+                    var ParcelCharges = $("#ParcelCharges").val();
+                    var HomeDeliveryCharges = $("#HomeDeliveryCharges").val();
+                    var ServiceTax = $("#ServiceTax").val();
+                    var VAT = $("#VAT").val();
+                    var ServiceCharges = $("#ServiceCharges").val();
+                    var TA = $("#TA").val();
+                    var HD = $("#HD").val();
+                    var EB = $("#EB").val();
+                    var KG = $("#KG").val();
+                    var CashDrawer = $("#CashDrawer").val();
+
+
+                    var CAT_save = new Object();
+                    CAT_save.ID = ID;
+                    CAT_save.ParcelCharges = ParcelCharges;
+                    CAT_save.HomeDeliveryCharges = HomeDeliveryCharges;
+                    CAT_save.ServiceTax = ServiceTax;
+                    CAT_save.VAT = VAT;
+                    CAT_save.ServiceCharges = ServiceCharges;
+                    CAT_save.TA = TA;
+                    CAT_save.HD = HD;
+                    CAT_save.EB = EB;
+                    CAT_save.KG = KG;
+                    CAT_save.CashDrawer = CashDrawer;
+
+
+                    $.ajax({
+
+                        type: "POST",
+                        url: '/OtherSetting/SaveOtherSetting/',
+                        data: JSON.stringify(CAT_save),
+                        contentType: "application/json;charset=utf-8",
+                        success: function (data, status, xhr) {
+
+                            window.location.reload();
+                        },
+                        error: function (xhr) {
+
+                        }
+                    });
+                    window.location.reload();
+                });
+            }
+        </script>
+
+
+
+
+    </body>
+
+</html>
+
+

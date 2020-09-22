@@ -1,0 +1,235 @@
+﻿
+@model ICollection<ResturantPOS.Models.Warehouse>
+
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <!--web grid styles starts-->
+    <style type="text/css">
+        /*styles for altering rows*/
+        .webgrid-row-style {
+            padding: 3px 7px 2px;
+        }
+
+        .webgrid-alternating-row {
+            background-color: #EAF2D3;
+            padding: 3px 7px 2px;
+        }
+    </style>
+
+
+    <h2 style="text-align:center;"> List of Warehouses</h2>
+    
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="margin-bottom:10%;">
+
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="WarehouseName" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label"   id="WarehouseType">Type</label>
+                            <div class="col-sm-8">
+                                @Html.DropDownList("Warehouse", (IEnumerable<SelectListItem>)ViewBag.Warehouse, "Select", new { @class = "form-control", @Required = true })
+                                 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Address</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control"   id="Address" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">City</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="City" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: 246%;">
+                            <label for="inputtext3" class="col-sm-2 control-label">Search By Warehouse Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputtext3">
+                            </div>
+                        </div>
+
+                    </form>
+                    <button type="button" class="btn btn-success" style="margin-left:42%;"  id="BtnCatCreate"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+                </div>
+
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+                      <div style="width:100%;float:left;padding-bottom:50px;">
+                          <h4> Category List</h4>
+                          @{
+                              if (Model != null)
+                              {
+                                  var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                  grid.Pager(WebGridPagerModes.NextPrevious);
+
+                                  @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("WarehouseName", style: "col2", format: @<text><span id="WarehouseName" class="display-mode">@item.WarehouseName</span>@Html.TextBox("ware-Edit", (string)item.WarehouseName, new { @class = "edit-mode form-control" })</text>),
+           grid.Column("Warehouse Type", style: "col2", format: @<text><span id="Type" class="display-mode">@item.WarehouseType</span>@Html.DropDownList("Kichen", (IEnumerable<SelectListItem>)ViewBag.Warehouse, (string)item.WarehouseType, new { @class = "form-control", @Required = true })  </text>),
+               grid.Column("Address", style: "col2", format: @<text><span id="Address" class="display-mode">@item.Address</span>@Html.TextBox("Address-Edit", (string)item.Address, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("City", style: "col2", format: @<text><span id="City" class="display-mode">@item.City</span>@Html.TextBox("City-Edit", (string)item.City, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("", style: "col1", format: @<text>
+                      <div style="padding-left:20px;">
+                          <button class="btn btn-default edit-item display-mode" id="@item.WarehouseName">Edit</button>
+                          <button class="btn btn-default display-mode delete-item" id="@item.WarehouseName">Delete</button>
+                          <button class="btn btn-default save-item edit-mode" id="@item.WarehouseName">Save</button>
+                          <button class="btn btn-default cancel-item edit-mode" id="@item.WarehouseName">Cancel</button>
+                      </div>
+                  </text>)))
+                              }
+                          }
+                      </div>
+                      <script type="text/javascript">
+                          initialize();
+
+                          function initialize() {
+
+                              $('.edit-mode').hide();
+
+                              $('.edit-item').on('click', function () {
+                                  $('.edit-mode').hide();
+                                  $('.delete-mode').hide();
+                                  $('.display-mode').show();
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+                              $('.cancel-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.display-mode,.edit-mode').toggle();
+                              });
+                              $('.delete-item').on('click', function () {
+                                  if (confirm("Are you sure to delete this contact?")) {
+                                      var tr = $(this).parents('tr:first');
+                                      var WarehouseName = tr.find('#ware-Edit').val();
+                                      var CAT = new Object();
+                                      CAT.WarehouseName = WarehouseName;
+                                      $.ajax({
+
+                                          type: "POST",
+                                          url: '/Warehouse/DeleteWarehouse/',
+                                          data: JSON.stringify(CAT),
+                                          contentType: "application/json;charset=utf-8",
+                                          success: function (data, status, xhr) {
+
+                                              window.location.reload();
+                                          },
+                                          error: function (xhr) {
+
+                                              window.location.reload();
+                                          }
+                                      });
+                                  }
+
+                              });
+
+                              $('.save-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  var WarehouseName = tr.find('#ware-Edit').val();
+                                  var WarehouseType = tr.find('#WarehouseType-Edit').val();
+                                  var Address = tr.find('#Address-Edit').val();
+                                  var City = tr.find('#City-Edit').val();
+                                  var WarehouseName = tr.find('#WarehouseName').text()
+                                  var CAT = new Object();
+                                  CAT.WarehouseName = WarehouseName;
+                                  CAT.WarehouseType = 'adfasd';
+                                  CAT.Address = Address;
+                                  CAT.City = City;
+                                 
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/Warehouse/WarehouseUpdate/',
+                                      data: JSON.stringify(WarehouseName,CAT),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                          window.location.reload();
+                                      }
+                                  });
+
+                                  window.location.reload();
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+
+                              $('#BtnCatCreate').on('click', function () {
+
+                                
+                                  var Warehousenameins = $('#WarehouseName').val();
+                                  var Warehousenameins1 = $("#WarehouseName").val();
+                                  var WarehouseTypeins = $("#WarehouseType").val();
+                                  var Addressins = $("#Address").val();
+                                  var Cityins = $("#City").val(); 
+
+                                  var CatIns1 = new Object();
+                                  CatIns1.WarehouseName = Warehousenameins1;
+                                  CatIns1.WarehouseType = 'Hodtel';
+                                  CatIns1.Address = Addressins;
+                                  CatIns1.City = Cityins;
+                                  
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/Warehouse/SaveWarehouse/',
+                                      data: JSON.stringify(CatIns1),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                      }
+                                  });
+                                  window.location.reload();
+                              });
+                          }
+                      </script>
+
+
+

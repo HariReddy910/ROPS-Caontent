@@ -1,0 +1,253 @@
+﻿
+@Model ICollection<ResturantPOS.Models.Registration>
+
+    <link href="~/Content/Registration.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+                      <link href="~/Content/bootstrap.css" rel="stylesheet" />
+                      <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+                      <script src="~/Scripts/jquery-1.10.2.js"></script>
+                      <script src="~/Scripts/bootstrap.min.js"></script>
+                      <script src="~/Scripts/bootstrap-datepicker.js"></script>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <form class="form-horizontal">
+
+                    <div class="form-group">
+                        <h2 style="text-align: center;">Registration</h2>
+                        <label for="inputtext3"  class="col-sm-4 control-label">User ID</label>
+                        <div class="col-sm-8">
+                            <input type="text"  class="form-control" id="UserID" placeholder="Required User ID">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">User Type</label>
+                        <div class="col-sm-8">
+                            <select id="UserType" class="form-control">
+                                <option>Super Admin</option>
+                                <option>Admin</option>
+                                <option>Cashier</option>
+                                <option>Waiter</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">PIN</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="Password" placeholder="Required Old PIN">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="Name" placeholder="Required Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Email ID</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="EmailID" placeholder="Required Email ID">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputnumber3" class="col-sm-4 control-label">Contact No</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="ContactNo" placeholder="Required Contact No">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputnumber3" class="col-sm-4 control-label">Status</label>
+                        <div class="col-sm-8">
+                            <label>
+                                <input type="checkbox"id="Active"> Active
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12 col-md-offset-0" style="margin-left: 8%;">
+                <button id="BtnCatCreate"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i><strong class="button-txt">Register</strong></button>
+            </div>
+        </div>
+    </div>
+
+                      <div style="width:100%;float:left;padding-bottom:50px;">
+                          <h4> Category List</h4>
+                          @{
+                              if (Model != null)
+                              {
+                                  var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                  grid.Pager(WebGridPagerModes.NextPrevious);
+
+                                  @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("UserID", style: "col2", format: @<text><span id="UserID" class="display-mode">@item.UserID</span>@Html.TextBox("UserID-Edit", (string)item.UserID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("UserType", style: "col2", format: @<text><span id="UserType" class="display-mode">@item.UserType</span>@Html.TextBox("UserType-Edit", (string)item.UserType, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Password", style: "col2", format: @<text><span id="Password" class="display-mode">@item.Password</span> @Html.TextBox("Password-Edit", (string)item.Password, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Name", style: "col2", format: @<text><span id="Name" class="display-mode">@item.Name</span>@Html.TextBox("Name-Edit", (string)item.Name, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("EmailID", style: "col2", format: @<text><span id="EmailID" class="display-mode">@item.EmailID</span>@Html.TextBox("EmailID-Edit", (string)item.EmailID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ContactNo", style: "col2", format: @<text><span id="ContactNo" class="display-mode">@item.ContactNo</span>@Html.TextBox("ContactNo-Edit", (string)item.ContactNo, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Active", style: "col2", format: @<text><span id="Active" class="display-mode">@item.Active</span> @Html.TextBox("Active-Edit", (string)item.Active, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("", style: "col1", format: @<text>
+                      <div style="padding-left:20px;">
+                          <button class="btn btn-default edit-item display-mode" id="@item.UserID">Edit</button>
+                          <button class="btn btn-default display-mode delete-item" id="@item.UserID">Delete</button>
+                          <button class="btn btn-default save-item edit-mode" id="@item.UserID">Save</button>
+                          <button class="btn btn-default cancel-item edit-mode" id="@item.UserID">Cancel</button>
+                      </div>
+                  </text>)))
+                              }
+                          }
+                      </div>
+
+                      <script type="text/javascript">
+                          initialize();
+
+                          function initialize() {
+
+                              $('.edit-mode').hide();
+
+                              $('.edit-item').on('click', function () {
+                                  $('.edit-mode').hide();
+                                  $('.delete-mode').hide();
+                                  $('.display-mode').show();
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+                              $('.cancel-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.display-mode,.edit-mode').toggle();
+                              });
+                              $('.delete-item').on('click', function () {
+                                  if (confirm("Are you sure to delete this contact?")) {
+                                      var tr = $(this).parents('tr:first');
+                                      var ID = tr.find('#UserID-Edit').val();
+                                     
+                                      var Cat = new Object();
+                                      Cat.UserID = ID;
+                                      $.ajax({
+
+                                          type: "POST",
+                                          url: '/Registration/DeleteContact/',
+                                          data: JSON.stringify(Cat),
+                                          contentType: "application/json;charset=utf-8",
+                                          success: function (data, status, xhr) {
+
+                                              window.location.reload();
+                                          },
+                                          error: function (xhr) {
+
+                                              window.location.reload();
+                                          }
+                                      });
+                                  }
+
+                              });
+
+                              $('.save-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  //var ID = tr.find('#Cat-Edit').val();
+                                  var UserID = tr.find('#UserID-Edit').val();
+                                  var UserType = tr.find('#UserType-Edit').val();
+                                  var Password = tr.find('#Password-Edit').val();
+                                  var Name = tr.find('#Name-Edit').val();
+                                  var EmailID = tr.find('#EmailID-Edit').val();
+                                  var ContactNo = tr.find('#ContactNo-Edit').val();
+                                  var Active = tr.find('#Active-Edit').val();
+                                
+
+                                  var CAT_save = new Object();
+                                  //CAT_save.ID = ID;
+                                  CAT_save.UserID = UserID;
+                                  CAT_save.UserType = UserType;
+                                  CAT_save.Password = Password;
+                                  CAT_save.Name = Name;
+                                  CAT_save.EmailID = EmailID;
+                                  CAT_save.ContactNo = ContactNo;
+                                  CAT_save.Active = Active;
+                                
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/Registration/RegistrationUpdate/',
+                                      data: JSON.stringify(CAT_save),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                          window.location.reload();
+                                      }
+                                  });
+
+                                  window.location.reload();
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+
+                              $('#BtnCatCreate').on('click', function () {
+
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Cat').val();
+                                  var UserID = $("#UserID").val();
+                                  var UserType = $("#UserType").val();
+                                  var Password = $("#Password").val();
+                                  var Name = $("#Name").val();
+                                  var EmailID = $("#EmailID").val();
+                                  var ContactNo = $("#ContactNo").val();
+                                  var Active = $("#Active").val();
+                                  
+
+
+                                  var CAT_save = new Object();
+                                  CAT_save.UserID = ID;
+                                  CAT_save.UserID = UserID;
+                                  CAT_save.UserType = UserType;
+                                  CAT_save.Password = Password;
+                                  CAT_save.Name = Name;
+                                  CAT_save.EmailID = EmailID;
+                                  CAT_save.ContactNo = ContactNo;
+                                  CAT_save.Active = Active;
+                              
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/Registration/SaveRegistration/',
+                                      data: JSON.stringify(CAT_save),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                      }
+                                  });
+                                  window.location.reload();
+                              });
+                          }
+                      </script>

@@ -1,0 +1,278 @@
+﻿
+@model ICollection<ResturantPOS.Models.EmailSetting>
+
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <!--web grid styles starts-->
+    <style type="text/css">
+        /*styles for altering rows*/
+        .webgrid-row-style {
+            padding: 3px 7px 2px;
+        }
+
+        .webgrid-alternating-row {
+            background-color: #EAF2D3;
+            padding: 3px 7px 2px;
+        }
+    </style>
+
+
+    <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            .EmailSetting-Container {
+                width: 500px;
+            }
+
+            .button {
+                background-color: #66ffb3; /* Green */
+                border: none;
+                color: #09090a;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+
+            .button1:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+            div {
+                border-radius: 10px;
+                background-color: #f2f2f2;
+                padding: 20px;
+                margin-top: 21px;
+            }
+        </style>
+
+    </head>
+    <body style="background-color: #f2f2f2 ;text-align: center;
+    margin-top:-74px;">
+        <div>
+            <h2>POS Email Setting</h2><br /><br />
+            <label>Server Name:</label>&nbsp&nbsp
+        </div>
+        <div class="form-group">
+            <label for="text" class="col-sm-4 control-label "   style="margin-right: 45px;" width="10px">ServerName</label>
+                <select class="form-control" id="ServerName"  width="193px" height="26px" >
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        
+            <label>SMTP Address:</label> <input type="text" id="SMTPAddress" name="SMTP Address" style="width: 190px"><br /><br />
+            <label>User Name:</label> <input type="text" id="Username" name="User Name" style="width: 190px;margin-left: 45px;"><br /><br />
+            <label>Password:</label> <input type="text" id="Password" name="Password" style="width: 190px;margin-left: 29px;"><br /><br />
+            <label>Port:</label> <input type="text" id="Port" name="Port" style="width: 190px;margin-left: 71px;"><br /><br />
+        <label for="text" class="col-sm-4 control-label "  style="margin-right: 45px;" width="10px">TLS_SSL_Required</label>
+        <select class="form-control" id="TLS_SSL_Required" width="193px" height="26px">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+            <form action="">
+                <input type="checkbox" id="IsDefault" name="default" value="Bike">Is Deafault<br>
+                <input type="checkbox" id="IsActive"name="enabled" value="Car">Is Enabled
+            </form>
+       
+        
+        <button class="button button1"  id="BtnCatCreate"><i class="fa fa-floppy-o" aria-hidden="true"></i>SAVE</button>
+        
+        
+
+   
+                      <div style="width:100%;float:left;padding-bottom:50px;">
+                          <h4> Category List</h4>
+                          @{
+                              if (Model != null)
+                              {
+                                  var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                  grid.Pager(WebGridPagerModes.NextPrevious);
+
+                                  @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("Id", style: "col2", format: @<text><span id="Id" class="display-mode">@item.Id</span>@Html.TextBox("Id-Edit", (int)item.Id, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ServerName", style: "col2", format: @<text><span id="ServerName" class="display-mode">@item.ServerName</span>@Html.DropDownList("ServerName-Edit", new SelectList(ViewBag.ServerName, "Value", "Text", (string)item.ServerName), new { @class = "edit-mode form-control" }) </text>),
+              grid.Column("SMTPAddress", style: "col2", format: @<text><span id="SMTPAddress" class="display-mode">@item.SMTPAddress</span> @Html.TextBox("SMTPAddress-Edit", (string)item.SMTPAddress, new { @class = "edit-mode form-control" })</text>),
+                 grid.Column("Username", style: "col2", format: @<text><span id="Username" class="display-mode">@item.Username</span>@Html.TextBox("Username-Edit", (string)item.Username, new { @class = "edit-mode form-control" })</text>),
+                   grid.Column("Password", style: "col2", format: @<text><span id="Password" class="display-mode">@item.Password</span>@Html.TextBox("Password-Edit", (string)item.Password, new { @class = "edit-mode form-control" })</text>),
+
+            grid.Column("Port", style: "col2", format: @<text><span id="Port" class="display-mode">@item.Port</span>@Html.TextBox("Port-Edit", (int)item.Port, new { @class = "edit-mode form-control" })</text>),
+                 grid.Column("TLS_SSL_Required", style: "col2", format: @<text><span id="TLS_SSL_Required" class="display-mode">@item.TLS_SSL_Required</span>@Html.DropDownList("TLS_SSL_Required-Edit", new SelectList(ViewBag.TLS_SSL_Required, "Value", "Text", (string)item.TLS_SSL_Required), new { @class = "edit-mode form-control" }) </text>),
+            grid.Column("IsDefault", style: "col2", format: @<text><span id="IsDefault" class="display-mode">@item.IsDefault</span>@Html.TextBox("IsDefault-Edit", (string)item.IsDefault, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("IsActive", style: "col2", format: @<text><span id="IsActive" class="display-mode">@item.IsActive</span>@Html.TextBox("IsActive-Edit", (string)item.IsActive, new { @class = "edit-mode form-control" })</text>),
+
+           grid.Column("", style: "col1", format: @<text>
+                      <div style="padding-left:20px;">
+                          <button class="btn btn-default edit-item display-mode" id="@item.Id">Edit</button>
+                          <button class="btn btn-default display-mode delete-item" id="@item.Id">Delete</button>
+                          <button class="btn btn-default save-item edit-mode" id="@item.Id">Save</button>
+                          <button class="btn btn-default cancel-item edit-mode" id="@item.Id">Cancel</button>
+                      </div>
+                  </text>)))
+                              }
+                          }
+                      </div>
+       
+                      <script type="text/javascript">
+                          initialize();
+
+                          function initialize() {
+
+                              $('.edit-mode').hide();
+
+                              $('.edit-item').on('click', function () {
+                                  $('.edit-mode').hide();
+                                  $('.delete-mode').hide();
+                                  $('.display-mode').show();
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+                              $('.cancel-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.display-mode,.edit-mode').toggle();
+                              });
+                              $('.delete-item').on('click', function () {
+                                  if (confirm("Are you sure to delete this contact?")) {
+                                      var tr = $(this).parents('tr:first');
+                                      var ID = tr.find('#Id-Edit').val();
+                                      var EMAIL = new Object();
+                                      EMAIL.Id = ID;
+                                      $.ajax({
+
+                                          type: "POST",
+                                          url: '/EmailSetting/DeleteEmailSetting/',
+                                          data: JSON.stringify(EMAIL),
+                                          contentType: "application/json;charset=utf-8",
+                                          success: function (data, status, xhr) {
+
+                                              window.location.reload();
+                                          },
+                                          error: function (xhr) {
+
+                                              window.location.reload();
+                                          }
+                                      });
+                                  }
+
+                              });
+
+                              $('.save-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Id-Edit').val();
+                                  var ServerName = tr.find('#ServerName-Edit').val();
+                                  var SMTPAddress = tr.find('#SMTPAddress-Edit').val();
+                                  var Username = tr.find('#Username-Edit').val();
+                                  var Password = tr.find('#Password-Edit').val();
+                                  var Port = tr.find('#Port-Edit').val();
+                                  var TLS_SSL_Required = tr.find('#TLS_SSL_Required-Edit').val();
+                                  var IsDefault = tr.find('#IsDefault-Edit').val();
+                                  var IsActive = tr.find('#IsActive-Edit').val();
+
+                                  var SET = new Object();
+                                  SET.Id = ID;
+                                  SET.ServerName = ServerName;
+                                  SET.SMTPAddress = SMTPAddress;
+                                  SET.Username = Username;
+                                  SET.Password = Password;
+                                  SET.Port = Port;
+                                  SET.TLS_SSL_Required = TLS_SSL_Required;
+                                  SET.IsDefault = IsDefault;
+                                  SET.IsActive = IsActive;
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/EmailSetting/EmailSettingUpdate/',
+                                      data: JSON.stringify(SET),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                          window.location.reload();
+                                      }
+                                  });
+
+                                  window.location.reload();
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+
+                              $('#BtnCatCreate').on('click', function () {
+
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Id').val();
+                                  var ServerNameins = $("#ServerName").val();
+                                  var SMTPAddressins = $("#SMTPAddress").val();
+                                  var Usernameins = $("#Username").val();
+                                  var Passwordins = $("#Password").val();
+                                  var Portins = $("#Port").val();
+                                  var TLS_SSL_Requiredins = $("#TLS_SSL_Required").val();
+                                  var IsDefaultins = $("#IsDefault").val();
+                                  var IsActiveins = $("#IsActive").val();
+
+
+                                  var EmailIns = new Object();
+                                  EmailIns.Id = ID;
+                                  EmailIns.ServerName = ServerNameins;
+                                  EmailIns.SMTPAddress = SMTPAddressins;
+                                  EmailIns.Username = Usernameins;
+                                  EmailIns.Password = Passwordins;
+                                  EmailIns.Port = Portins;
+                                  EmailIns.TLS_SSL_Required = TLS_SSL_Requiredins;
+                                  EmailIns.IsDefault = IsDefaultins;
+                                  EmailIns.IsActive = IsActiveins;
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/EmailSetting/SaveEmailSetting/',
+                                      data: JSON.stringify(EmailIns),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                      }
+                                  });
+                                  window.location.reload();
+                              });
+                          }
+                      </script>
+
+                      </body>
+
+                      </html>

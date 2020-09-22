@@ -1,0 +1,168 @@
+﻿@model ICollection<ResturantPOS.Models.ExpenseType>
+
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            </div>
+        <div class="col-md-6">
+            <form class="form-horizontal">
+                <h2>List Of Expense Types</h2> 
+               <div class="form-group">
+                   
+                    <label for="inputtext3" class="col-sm-2 control-label"style="width: 29%;">Search By Expense:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Expense">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success" id="BtnCatCreate" style="margin-left: 17%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+
+            </form>  
+        </div>
+        <div class="col-md-3">
+            </div>
+        </div>
+</div>
+<div style="width:100%;float:left;padding-bottom:50px;">
+    
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+      
+            grid.Column("Search By Expense", style: "col2", format: @<text><span id="Expense" class="display-mode">@item.Type</span>@Html.TextBox("Expense-Edit", (string)item.Type, new { @class = "edit-mode form-control" })</text>),
+             grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.Type">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.Type">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.Type">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.Type">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var Type = tr.find('#Type-Edit').val();
+                var Type = new Object();
+                Type.Type = Type;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/ExpenseType/DeleteContact/',
+                    data: JSON.stringify(Type),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var Type = tr.find('#Type-Edit').val();
+           
+
+            var Type = new Object();
+            Type.Type = Type;
+           
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/ExpenseType/ExpenseTypeUpdate/',
+                data: JSON.stringify(Type),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#BtnCatCreate').on('click', function () {
+
+             
+            var Type = $('#Expense').val();
+            
+            var Type1 = new Object();
+            Type1.Type = Type;
+          
+
+            $.ajax({
+
+                type: "POST",
+                url: '/ExpenseType/SaveExpenseType/',
+                data: JSON.stringify(Type1),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>

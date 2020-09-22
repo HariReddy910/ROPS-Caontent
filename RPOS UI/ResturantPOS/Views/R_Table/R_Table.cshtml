@@ -1,0 +1,216 @@
+﻿
+@model ICollection<ResturantPOS.Models.R_Table>
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <!--web grid styles starts-->
+    
+   
+
+
+
+    <!DOCTYPE html>
+    <html>
+<head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="~/Content/Table.css" rel="stylesheet" />
+</head>
+    <body style="text-align: center;MARGIN-TOP: -49px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="a">
+                        <h2> List Of Tables</h2>
+                        <label for="Table No">Table No</label>
+                        <input type="text" id="Tab" name="Table No" placeholder="Required Table No" style="width: 283px;margin-left:13px;margin-top: 15px;"><br>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"id=" Status">Status
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="color" id="BkColor" class="form-control col-lg-3 edit-item  checkbox " value="#00ff00" />BkColor</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="BtnCatCreate" type="button" class="btn btn-success" style="margin-left: 36%;"><i class="fa fa-hand-pointer-o fa-3x" aria-hidden="true"></i> Activate/Deactivate.</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4>List of Tables</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("TableNo", style: "col2", format: @<text><span id="TableNo" class="display-mode">@item.TableNo</span>@Html.TextBox("TableNo-Edit", (string)item.TableNo, new { @class = "edit-mode form-control " ,@readonly= "readonly" })</text>),
+            grid.Column("Status", style: "col2", format: @<text><span id="Status" class="display-mode">@item.Status</span><input type="checkbox"  id="Status-Edit" class="edit-item col-lg-2 edit-mode  checkbox " /> </text>),
+            grid.Column("BkColor", style: "col2", format: @<text><span   id="BkColor" class="form-control display-mode " style="background-color:@item.BkColor"></span> <label class="edit-mode  "><input type="color" id="BkColor" class="color form-control edit-mode" value="@item.BkColor.Trim()"/>BkColor</label></text>),
+            grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.TableNo">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.TableNo">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.TableNo">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.TableNo">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#TableNo-Edit').val();
+                var TAB = new Object();
+                TAB.TableNo = ID;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/R_Table/DeleteR_Table/',
+                    data: JSON.stringify(TAB),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+        var color = ''; 
+        $('.color').on('input', function () {
+            var tr = $(this).parents('tr:first');
+            color = tr.find('.color').val();
+            alert(color);
+        })                 
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#TableNo-Edit').val();
+            var Status = "";
+                if (tr.find('#Status-Edit').is(':checked', true))
+                {
+                    Status = "Active";
+                 }
+            else
+                {
+                    Status = "Inactive";
+                }
+             
+          //  var BkColor = tr.find('#BkColor-Edit').val();
+            var TabIns = new Object();
+            TabIns.TableNo = ID;
+            TabIns.Status = Status;
+            TabIns.BkColor = color; 
+            $.ajax({
+
+                type: "POST",
+                url: '/R_Table/R_TableUpdate/',
+                data: JSON.stringify(TabIns),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        var color
+        $('#BkColor').on('input', function () {
+            color = $('#BkColor').val();
+            alert(color);
+        })
+        $('#BtnCatCreate').on('click', function () {
+           // var color = '';
+            var tr = $(this).parents('tr:first');
+            var ID = $('#Tab').val();
+            var TableNoins = $("#TableNo").val();  
+            if ($('#Status').is(':checked')) {
+                Status = 'Active';
+            }
+            else
+            {
+                Status = 'Inactive';
+            }
+            var TabIns = new Object();
+            TabIns.TableNo = ID;
+            TabIns.Status = Status;
+            TabIns.BkColor = color;  
+            $.ajax({
+
+                type: "POST",
+                url: '/R_Table/SaveR_Table/',
+                data: JSON.stringify(TabIns),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+
+

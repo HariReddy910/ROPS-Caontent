@@ -1,0 +1,94 @@
+c:\users\msamiudd.oradev\documents\visual studio 2017\Projects\RPOS\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+c:\users\msamiudd.oradev\documents\visual studio 2017\Projects\RPOS\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+c:\users\msamiudd.oradev\documents\visual studio 2017\Projects\RPOS\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+c:\users\msamiudd.oradev\documents\visual studio 2017\Projects\RPOS\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+c:\users\msamiudd.oradev\documents\visual studio 2017\Projects\RPOS\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\msamiudd.ORADEV\documents\visual studio 2017\Projects\RPOS\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\msamiudd.ORADEV\documents\visual studio 2017\Projects\RPOS\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\msamiudd.ORADEV\documents\visual studio 2017\Projects\RPOS\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\msamiudd.ORADEV\documents\visual studio 2017\Projects\RPOS\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+D:\Projects\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+D:\Projects\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+D:\Projects\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+D:\Projects\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+D:\Projects\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+D:\Projects\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+D:\Projects\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+D:\Projects\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+D:\Projects\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+I:\ \RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+I:\ \RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+I:\ \RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+I:\ \RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+I:\ \RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+I:\ \RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+I:\ \RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+I:\ \RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+I:\ \RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\sys\Desktop\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+C:\Users\sys\Desktop\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+C:\Users\sys\Desktop\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+C:\Users\sys\Desktop\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+C:\Users\sys\Desktop\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\sys\Desktop\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\sys\Desktop\RPOS-master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\sys\Desktop\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\sys\Desktop\RPOS-master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\sys\Desktop\RPOS-master\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\Public\Downloads\Norton\{NS22901-TTW-FSD00001}\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\Admin\Desktop\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+D:\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+D:\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+D:\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+D:\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+D:\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+D:\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+D:\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+D:\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+D:\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.deps.json
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.csproj.CoreCompileInputs.cache
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfoInputs.cache
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\RPOS_Master\RPOS\obj\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\bin\Debug\netcoreapp1.1\RPOS.deps.json
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.json
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\bin\Debug\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\bin\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\bin\Debug\netcoreapp1.1\RPOS.pdb
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\obj\Debug\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\obj\Debug\netcoreapp1.1\RPOS.csproj.CoreCompileInputs.cache
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfoInputs.cache
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\obj\Debug\netcoreapp1.1\RPOS.AssemblyInfo.cs
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\obj\Debug\netcoreapp1.1\RPOS.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS_api\obj\Debug\netcoreapp1.1\RPOS.pdb

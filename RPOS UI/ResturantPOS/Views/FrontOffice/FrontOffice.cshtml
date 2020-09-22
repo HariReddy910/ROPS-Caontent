@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "FrontOffice";
+}
+
+
+<head>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<section>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-2 col-xs-6"id="btnn">
+            <button id="btnn-inner"onclick="location.href='@Url.Action("WorkPeriod","WorkPeriod")'"><i class="fa fa-calendar fa-3x" aria-hidden="true"></i><br /><h4> Work Period </h4></button>
+            </div>
+        <div class="col-md-3 col-xs-6"id="btnn">
+            <button id="btnn-inner"onclick="location.href='@Url.Action("POS","FrontOffice")'"><i class="fa fa-building fa-3x" aria-hidden="true"></i><br /><h4> POS </h4></button>
+        </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-2 col-xs-6" id="btnn">
+            <button id="btnn-inner" onclick="location.href='@Url.Action("Tickets","FrontOffice")'"><i class="fa fa-ticket fa-3x" aria-hidden="true"></i><br /><h4> Tickets </h4></button>
+        </div>
+        <div class="col-md-3 col-xs-6" id="btnn">
+            <button id="btnn-inner"onclick="location.href='@Url.Action("WorkPeriodReport","FrontOffice")'"><i class="fa fa-file-word-o fa-3x" aria-hidden="true"></i><br /><h4> Work Period Report </h4></button>
+        </div>
+        
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-3 col-md-offset-2 col-xs-6" id="btnn">
+            <button id="btnn-inner" onclick="location.href='@Url.Action("POSReport","FrontOffice")'"><i class="fa fa-file-text-o fa-3x" aria-hidden="true"></i><br /><h4> POS Report </h4></button>
+        </div>
+        <div class="col-md-3 col-xs-6" id="btnn">
+            <button id="btnn-inner" onclick="location.href='@Url.Action("Logout","FrontOffice")'"><i class="fa fa-sign-out fa-3x" aria-hidden="true"></i><br /><h4> Logout </h4></button>
+        </div>
+    </div>
+</div>
+

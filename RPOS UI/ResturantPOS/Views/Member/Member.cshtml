@@ -1,0 +1,224 @@
+﻿@model ICollection<ResturantPOS.Models.Member>
+ 
+@{
+    ViewBag.Title = "AddMember";
+}
+
+<h2 style="text-align:center">Member Registration</h2>
+
+<link href="~/Content/AddMember.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Member ID</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="MemberID" placeholder="Required Member ID">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Member Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Name" placeholder="Required Member Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Address</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" rows="2" id="Address"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-4 control-label">Contact No</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="ContactNo" placeholder="Required Contact No ">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label for="text" class="col-sm-2 control-label">Status</label>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">Is Active
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button id="Save" type="button" class="btn btn-success" style="margin-left: 29%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Category List</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+            grid.Columns(
+                grid.Column("Member Id", style: "col2", format: @<text><span id="MemberID" class="display-mode">@item.MemberID</span>@Html.TextBox("MemberID-Edit", (int)item.MemberID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Name ", style: "col2", format: @<text><span id="Name" class="display-mode">@item.Name</span>@Html.TextBox("Name-Edit", (string)item.Name, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Contact", style: "col2", format: @<text><span id="ContactNo" class="display-mode">@item.ContactNo</span>@Html.TextBox("ContactNo-Edit", (string)item.ContactNo, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Address", style: "col2", format: @<text><span id="Address" class="display-mode">@item.Address</span>@Html.TextBox("Address-Edit", (string)item.Address, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Status ", style: "col2", format: @<text><span id="Active" class="display-mode"></span><label class="form-text-label edit-mode">Status : </label> <input type="checkbox" class="label-check-box edit-mode"> <label class="form-text-lbl edit-mode">Is Active</label></text>),
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.MemberID">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.MemberID">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.MemberID">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.MemberID">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var MemberID = tr.find('#MemberID-Edit').val();
+                var member = new Object();
+                member.MemberID = MemberID;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/Member/DeleteMember/',
+                    data: JSON.stringify(member),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var MemberID = tr.find('#MemberID-Edit').val();
+            var Name = tr.find('#Name-Edit').val();
+            var ContactNo = tr.find('#ContactNo-Edit').val();
+            var Address = tr.find('#Address-Edit').val();
+             
+            var member = new Object();
+            member.MemberID = MemberID;
+            member.Name = Name;
+            member.ContactNo = ContactNo;
+            member.Address = Address;
+            
+
+            member.Active = 'Yes';
+
+            $.ajax({
+
+                type: "POST",
+                url: '/Member/MemberUpdate/',
+                data: JSON.stringify(member),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#Save').on('click', function () {
+
+            var MemberID = $('#MemberID').val();
+            var Name =   $('#Name').val();
+            var ContactNo = $('#ContactNo').val();
+            var Address = $('#Address').val();
+            
+
+            var member = new Object();
+            member.MemberID = MemberID;
+            member.Name = Name;
+            member.ContactNo = ContactNo;
+            member.Address = Address;
+             
+
+            member.Active = 'Yes';
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/Member/SaveMember/',
+                data: JSON.stringify(member),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+

@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "RefundFund";
+}
+
+<h2>RefundFund</h2>
+
+@model ICollection<ResturantPOS.Models.GetBalance>
+ 
+<h2>GetAFund</h2>
+
+
+<link href="~/Content/AddMember.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Fund List</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+            grid.Columns(
+                grid.Column("Id", style: "col2", format: @<text><span id="Id" class="display-mode">@item.Id</span>@Html.TextBox("Id-Edit", (int)item.Id, new { @class = "edit-mode form-control", @readonly = "readonly" })</text>),
+            grid.Column("Name ", style: "col2", format: @<text><span id="Name" class="display-mode">@item.Name</span>@Html.TextBox("Name-Edit", (string)item.Name, new { @class = "edit-mode form-control", @readonly = "readonly" }) </text>),
+            grid.Column("Balance", style: "col2", format: @<text><span id="Balance" class="display-mode">@item.Balance</span>@Html.TextBox("Balance-Edit", (double)item.Balance, new { @class = "edit-mode form-control ", @readonly = "readonly" })</text>),
+            grid.Column("Add Fund", style: "col2", format: @<text><span id="AddFund" class="display-mode">0.00</span><input type="text" id="AddFund-Edit" class="edit-mode form-control"> <input type="date" class="edit-mode form-control" id="Date"></text>),
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.Id">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.Id">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.Id">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.Id">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+
+
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var Id = tr.find('#Id-Edit').val();
+                var MemberLedger = new Object();
+                MemberLedger.MemberID = Id;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/AddFund/DeleteMember1/',
+                    data: JSON.stringify(MemberLedger),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var MemberID = tr.find('#Id-Edit').val();
+
+            var Debit = tr.find('#Balance-Edit').val();
+            var ADD = tr.find('#AddFund-Edit').val();
+            var Date = tr.find('input[type = "date"]').val();
+            
+            var MemberLedger = new Object();
+            MemberLedger.MemberID = MemberID;
+            MemberLedger.Debit = ADD;
+            MemberLedger.Date = Date;
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/AddFund/SaveMember1/',
+                data: JSON.stringify(MemberLedger),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        //$('#BtnCatCreate').on('click', function () {
+
+        //    var DishName = $('#DishName').val();
+        //    var Category = $('#Type').val();
+        //    var Kitchen = $('#Kichen').val();
+        //    var Rate = $('#Rate').val();
+        //    var Discount = $('#Discount').val();
+
+        //    var dish = new Object();
+        //    dish.DishName = DishName;
+        //    dish.Category = Category;
+        //    dish.Kitchen = Kitchen;
+        //    dish.Rate = Rate;
+        //    dish.Discount = Discount;
+
+
+        //    $.ajax({
+
+        //        type: "POST",
+        //        url: '/MenuItems/SaveDish/',
+        //        data: JSON.stringify(dish),
+        //        contentType: "application/json;charset=utf-8",
+        //        success: function (data, status, xhr) {
+
+        //            window.location.reload();
+        //        },
+        //        error: function (xhr) {
+
+        //        }
+        //    });
+        //    window.location.reload();
+        //});
+    }
+</script>
+
+
+
+
+
+
+
+
+

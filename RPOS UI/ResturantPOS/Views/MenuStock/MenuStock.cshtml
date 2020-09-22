@@ -1,0 +1,155 @@
+﻿@model IEnumerable<ResturantPOS.Models.Stock_Store_myjoin>
+@{
+    ViewBag.Title = "MenuStock";
+}
+
+<h2>MenuStock</h2>
+
+<head>
+    <link href="~/Content/ResurantInfo.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+    <h3>Menu Item Stock</h3>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Stock ID</label>
+                    <div class="col-sm-8">
+
+                        @Html.TextBox("StockId", (int)ViewBag.Id, new { @class = "form-control", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">DATE</label>
+                    <div class="col-sm-8">
+                    </div>
+                    <input type="date" class="form-control sdate" id="date" placeholder="Required DATE">
+
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Remarks</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control sremark" rows="3" id="Remark"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Item Name</label>
+                    <div class="col-sm-8">
+                        <!-- <input type="text" class="form-control Type" id="inputtext3" placeholder="Required Item Name">--->
+
+
+                        @Html.DropDownList("mydata", (IEnumerable<SelectListItem>)ViewBag.Item, "--Select--", new { @class = "form-control" })
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Quantity</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control sqty" id="Qty" placeholder="Required Quantity">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success menu_add" style="margin-left: 35%;" id="menu_save"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Add Item Of Table </button>
+                <button type="button" class="btn btn-success menu_remove" style="margin-left: 35%;" id="menu_save"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Remove Item Of Table</button>
+                <button type="button" class="btn btn-success menu_save" style="margin-left: 35%;" id="menu_save"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save In Database</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+<table class="table panel table" id="myTable">
+    <tr>
+        
+        <th>Dish Name</th>
+        <th>Dish Quantity </th>
+    </tr>
+
+</table>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+// JQuery Reference, If you have added jQuery reference in your master page then ignore,
+// else include this too with the below reference
+
+<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
+<script>
+
+
+    //    $(document).ready(function () {
+    //         $('#myTable').dataTable();
+             
+    //});
+ 
+    $(function () {
+        $('.menu_add').click(function () {
+            var Stock_Id = $("#StockId").val();
+            var sname = $('#mydata').val();
+            var iqty = $('#Qty').val();
+            $('#myTable tbody').append('<tr><td>' + sname + '</td><td>' + iqty + '</td></tr>');
+            $('#mydata').val('');
+            $('#Qty').val('');
+        });
+
+        $('.menu_save').click(function () {
+           // var obj = {};
+            var List =[];
+            // loop over each table row (tr)
+
+
+			 var table = $("#mprDetailDataTable table tbody");
+
+			 table.find('tr').each(function (i, el) {
+        var $tds = $(this).find('td'),
+             productId = $tds.eq(0).text(),
+             product = $tds.eq(1).text(),
+			 obj={};
+			 obj.Dish = productId;
+                obj.Qty = product;
+                List.push(obj);
+            
+        // do something with productId, product, Quantity
+    });
+           /* $("#myTable tr").each(function(){
+        var currentRow=$(this);
+                //var col1_value =;
+				var obj={};
+                var col2_value = currentRow.closest('td:eq(0)').text();
+                var col3_value = currentRow.closest('td:eq(1)').text();
+                obj.StockID = $("#StockId").val();
+                obj.Dish = col2_value;
+                obj.Qty = col3_value;
+                List.push(obj);
+            });*/
+            alert(JSON.stringify(List));
+            var Stid = $("#StockId").val();
+            var Date = $("#date").val();
+            var Remark = $("#Remark").val();
+            var Stock_Store = new Object();
+            Stock_Store.St_ID = Stid;
+            Stock_Store.Remarks = Remark;
+            Stock_Store.Date = Date;
+            $.ajax({
+                type: "POST",
+                url: '/MenuStock/AddStock/',
+                data: JSON.stringify({ Stock_Store: Stock_Store, List: List }),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+                    window.location.reload();
+                },
+                error: function (xhr) {
+                    window.location.reload();
+                }
+            });
+        });
+    });
+</script>

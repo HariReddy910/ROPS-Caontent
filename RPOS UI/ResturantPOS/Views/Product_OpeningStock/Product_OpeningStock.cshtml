@@ -1,0 +1,271 @@
+﻿
+@model ICollection<ResturantPOS.Models.Product_OpeningStock>
+
+    <h2 style="text-align: center;margin-bottom:4%;">Product Entry</h2>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Product Code</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputtext3" placeholder="Required Product Code">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Product Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputtext3" placeholder="Required Product Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Category</label>
+                        <div class="col-sm-8">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Description</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Unit:</label>
+                        <div class="col-sm-8">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Price</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputtext3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext3" class="col-sm-4 control-label">Reorder Point</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputtext3">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5" style="margin-left: -3%;">
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Warehouse</label>
+                    <div class="col-sm-8">
+                        <select id="Warehouse" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Quantity</label>
+                    <div class="col-sm-8">
+                        <input type="text"  class="form-control" id="Qty">
+                    </div>
+                </div><br><br>
+                <div style="margin-left: 37%;">
+                    <label class="checkbox-inline form-group">
+                        <input type="checkbox" id="HasExpiryDate" value="option1"><label for="inputtext3" class="col-sm-12 control-label">Has Expiry Date?</label>
+                    </label>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Expiry Date</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="ExpiryDate">
+                    </div><br><br>
+                    <button type="button" id="BtnCatCreate" class="btn btn-success" style="margin-left:36%;"><i class="fa fa-plus fa-3x" aria-hidden="true"></i> Add.</button>
+
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+
+
+
+           <div style="width:100%;float:left;padding-bottom:50px;">
+                          <h4> Product Entry </h4>
+                          @{
+                              if (Model != null)
+                              {
+                                  var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                  grid.Pager(WebGridPagerModes.NextPrevious);
+
+                                  @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("NO", style: "col2", format: @<text><span id="PS_ID" class="display-mode">@item.PS_ID</span>@Html.TextBox("PS_ID-Edit", (int)item.PS_ID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Warehouse", style: "col2", format: @<text><span id="Warehouse" class="display-mode">@item.Warehouse</span>@Html.TextBox("Warehouse-Edit", (string)item.Warehouse, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Qty", style: "col2", format: @<text><span id="Qty" class="display-mode">@item.Qty</span> @Html.TextBox("Qty-Edit", (decimal)item.Qty, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("HasExpiryDate", style: "col2", format: @<text><span id="HasExpiryDate" class="display-mode">@item.HasExpiryDate</span>@Html.TextBox("HasExpiryDate-Edit", (string)item.HasExpiryDate, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ExpiryDate", style: "col2", format: @<text><span id="ExpiryDate" class="display-mode">@item.ExpiryDate</span>@Html.TextBox("ExpiryDate-Edit", (string)item.ExpiryDate, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("", style: "col1", format: @<text>
+                      <div style="padding-left:20px;">
+                          <button class="btn btn-default edit-item display-mode" id="@item.PS_ID">Edit</button>
+                          <button class="btn btn-default display-mode delete-item" id="@item.PS_ID">Delete</button>
+                          <button class="btn btn-default save-item edit-mode" id="@item.PS_ID">Save</button>
+                          <button class="btn btn-default cancel-item edit-mode" id="@item.PS_ID">Cancel</button>
+                      </div>
+                  </text>)))
+                              }
+                          }
+                      </div>
+
+                      <script type="text/javascript">
+                          initialize();
+
+                          function initialize() {
+
+                              $('.edit-mode').hide();
+
+                              $('.edit-item').on('click', function () {
+                                  $('.edit-mode').hide();
+                                  $('.delete-mode').hide();
+                                  $('.display-mode').show();
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+                              $('.cancel-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.display-mode,.edit-mode').toggle();
+                              });
+                              $('.delete-item').on('click', function () {
+                                  if (confirm("Are you sure to delete this contact?")) {
+                                      var tr = $(this).parents('tr:first');
+                                      var ID = tr.find('#Cat-Edit').val();
+                                      var CAT = new Object();
+                                      CAT.PS_ID = ID;
+                                      $.ajax({
+
+                                          type: "POST",
+                                          url: '/Product_OpeningStock/DeleteContact/',
+                                          data: JSON.stringify(CAT),
+                                          contentType: "application/json;charset=utf-8",
+                                          success: function (data, status, xhr) {
+
+                                              window.location.reload();
+                                          },
+                                          error: function (xhr) {
+
+                                              window.location.reload();
+                                          }
+                                      });
+                                  }
+
+                              });
+
+                              $('.save-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Cat-Edit').val();
+                                  var Warehouse = tr.find('#Warehouse-Edit').val();
+                                  var Qty = tr.find('#Qty-Edit').val();
+                                  var HasExpiryDate = tr.find('#HasExpiryDate-Edit').val();
+                                  var ExpiryDate = tr.find('#ExpiryDate-Edit').val();
+                              
+
+
+                                  var CAT_save = new Object();
+                                  CAT_save.ID = ID;
+                                  CAT_save.Warehouse = Warehouse;
+                                  CAT_save.Qty = Qty;
+                                  CAT_save.HasExpiryDate = HasExpiryDate;
+                                  CAT_save.ExpiryDate = ExpiryDate;
+                                
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/Product_OpeningStock/Product_OpeningStockUpdate/',
+                                      data: JSON.stringify(CAT_save),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                          window.location.reload();
+                                      }
+                                  });
+
+                                  window.location.reload();
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+
+                              $('#BtnCatCreate').on('click', function () {
+
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Cat').val();
+                                  var Warehouse = $("#Warehouse").val();
+                                  var Qty = $("#Qty").val();
+                                  var HasExpiryDate = $("#HasExpiryDate").val();
+                                  var ExpiryDate = $("#ExpiryDate").val();
+                                
+
+
+                                  var CAT_save = new Object();
+                                  CAT_save.ID = ID;
+                                  CAT_save.Warehouse = Warehouse;
+                                  CAT_save.Qty = Qty;
+                                  CAT_save.HasExpiryDate = HasExpiryDate;
+                                  CAT_save.ExpiryDate = ExpiryDate;
+                                 
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/Product_OpeningStock/SaveProduct_OpeningStock/',
+                                      data: JSON.stringify(CAT_save),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                      }
+                                  });
+                                  window.location.reload();
+                              });
+                          }
+                      </script>

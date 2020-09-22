@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\APYN08\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\APYN08\\.nuget\\packages"
+    ]
+  }
+}

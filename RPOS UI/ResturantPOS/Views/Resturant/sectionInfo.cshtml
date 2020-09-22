@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "sectionInfo";
+}
+
+<link href="~/Content/SectionInfo.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<section class="kitchen">
+             <h1 style="text-align: center;">Kitchen/Section Master</h1>
+    <!--kitchen/section Name -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <div class="form-text">
+                <label class="form-text-label">Kitchen/Section Name</label> <input type="text" class="label-text-box">
+                </div>
+                <div class="form-text">
+                <label class="form-text-label">Printer Name</label> <select class="label-text-box"><option value="#"></option> </select>
+                </div>
+               <div class="form-text">
+               <input type="checkbox" name="IsEnabled" value="IsEnabled" style="margin-top: 16px;"><label class="form-text-label">Is Enabled</label>
+               </div>
+               <div class="form-text">
+                   <label>
+                       Note:If printer is shared on network then use network path of shared printer as printer name
+                       <br />
+                       eg : \\ServerName\PrinterName
+                   </label>
+               </div>
+
+          </div>
+    <div class="col-md-3">
+    </div>
+    </div>
+    </div>
+
+    
+
+ 
+       
+    <!--buttons-->
+    <div class="container kitchen-inner">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        
+        <div class="col-md-2" >
+        <button id="controls-inner"style="margin-left:190%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i><strong class="txt">Save</strong></button>
+        </div>
+        
+        
+        <div class="col-md-3">
+        </div>
+        
+        
+    </div>
+    </div>
+</section>
+

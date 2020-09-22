@@ -1,0 +1,218 @@
+﻿@model ICollection<ResturantPOS.Models.Category>
+    
+
+   
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<!--web grid styles starts-->
+<style type="text/css">
+    /*styles for altering rows*/
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: #EAF2D3;
+        padding: 3px 7px 2px;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Category:</label>
+                    <div class="col-sm-8">
+                        <input type="text"  class="form-control" id="Category" placeholder="Required Category">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">VAT %:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="VAT" placeholder="Required VAT%">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Service Tax %:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="ST" placeholder="Required Service Tax %">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputtext3" class="col-sm-4 control-label">Service Charges%:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="SC" placeholder="Required Service Charges %">
+                    </div>
+                </div>
+                <button id="BtnCatCreate" type="button" class="btn btn-success" style="margin-left: 29%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+                         
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Category List</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("NO", style: "col2", format: @<text><span id="Cat_Id" class="display-mode">@item.Cat_Id</span>@Html.TextBox("Cat-Edit", (int)item.Cat_Id, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Category Name", style: "col2", format: @<text><span id="Category" class="display-mode">@item.CategoryName</span>@Html.TextBox("Category-Edit", (string)item.CategoryName, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("VAT", style: "col2", format: @<text><span id="VAT" class="display-mode">@item.VAT</span> @Html.TextBox("VAT-Edit", (double)item.VAT, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ST", style: "col2", format: @<text><span id="ST" class="display-mode">@item.ST</span>@Html.TextBox("ST-Edit", (double)item.ST, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("SC", style: "col2", format: @<text><span id="SC" class="display-mode">@item.SC</span>@Html.TextBox("SC-Edit", (double)item.SC, new { @class = "edit-mode form-control" })</text>),
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.Cat_Id">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.Cat_Id">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.Cat_Id">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.Cat_Id">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function ()
+        {
+            if (confirm("Are you sure to delete this contact?"))
+            {
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#Cat-Edit').val();
+                var CAT = new Object();
+                CAT.Cat_Id = ID;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/Home/DeleteContact/',
+                    data: JSON.stringify(CAT),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+                       
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+                       
+                        window.location.reload();
+                    }
+                });
+            }
+           
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#Cat-Edit').val();
+            var Category = tr.find('#Category-Edit').val();
+            var VAT = tr.find('#VAT-Edit').val();
+            var ST = tr.find('#ST-Edit').val();
+            var SC = tr.find('#SC-Edit').val();
+            
+            var CAT = new Object();
+            CAT.Cat_Id = ID;
+            CAT.CategoryName = Category;
+            CAT.VAT = VAT;
+            CAT.ST = ST;
+            CAT.SC = SC;
+            
+            
+            $.ajax({
+               
+                type: "POST",
+                url: '/Home/CategoryUpdate/',
+                data: JSON.stringify(CAT),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr)
+                {
+                   
+                    window.location.reload();
+                },
+                error: function (xhr) {
+                   
+                    window.location.reload();
+                }
+            });
+        
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#BtnCatCreate').on('click', function ()
+        {
+            
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#Cat').val();
+            var Categoryins = $("#Category").val();
+            var VATins = $("#VAT").val();
+            var STins = $("#ST").val();
+            var SCins = $("#SC").val();
+           
+         
+            var CatIns = new Object();
+            CatIns.Cat_Id = ID;
+            CatIns.CategoryName = Categoryins;
+            CatIns.VAT = VATins;
+            CatIns.ST = STins;
+            CatIns.SC = SCins;
+
+         
+            $.ajax({
+
+                type: "POST",
+                url: '/Home/SaveCategory/',
+                data: JSON.stringify(CatIns),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+                   
+                    window.location.reload();
+                },
+                error: function (xhr) {
+                 
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+
+
+
+
+

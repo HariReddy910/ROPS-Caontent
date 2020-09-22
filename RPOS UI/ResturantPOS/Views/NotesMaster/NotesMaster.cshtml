@@ -1,0 +1,209 @@
+﻿@model ICollection<ResturantPOS.Models.NotesMaster>
+
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+   
+@*<style>
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+    
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .button {
+            background-color: #66ffb3; /* Green */
+            border: none;
+            color: #09090a;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .button1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>*@
+</head>
+
+<body style="text-align: center;MARGIN-TOP: -49px;">
+    <div class="a">
+
+        <h2> Notes Master</h2>
+      <textarea rows="15" cols="50" id="Notes"></textarea><br /><br>
+
+        <button class="button button1" id="BtnCatCreate"><i class="fa fa-floppy-o" aria-hidden="true"></i>SAVE</button>
+
+    </div>
+
+
+    <div style="width:100%;float:left;padding-bottom:50px;">
+        <h4>Notes Master</h4>
+        @{
+            if (Model != null)
+            {
+                var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                grid.Pager(WebGridPagerModes.NextPrevious);
+
+                @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+                     headerStyle: "",
+                     alternatingRowStyle: "webgrid-alternating-row",
+                     selectedRowStyle: "webgrid-row-style",
+                     columns:
+                      grid.Columns(
+                      grid.Column("ID", style: "col2", format: @<text><span id="Notes" class="display-mode">@item.ID</span><span id="Id-Edit" class=" form-control col-lg-2  edit-mode ">@item.ID</span></text>),
+
+                     grid.Column("Notes", style: "col2", format: @<text><span id="Notes" class="display-mode">@item.Notes</span>@Html.TextBox("Notes-Edit", (string)item.Notes, new { @class = "edit-mode form-control" })</text>),
+
+                    grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.ID">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.ID">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.ID">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.ID">Cancel</button>
+                    </div>
+        </text>)))
+                }
+            }
+    </div>
+
+    <script type="text/javascript">
+        initialize();
+
+        function initialize() {
+
+            $('.edit-mode').hide();
+
+            $('.edit-item').on('click', function () {
+                $('.edit-mode').hide();
+                $('.delete-mode').hide();
+                $('.display-mode').show();
+                var tr = $(this).parents('tr:first');
+                tr.find('.edit-mode, .display-mode').toggle();
+            });
+            $('.cancel-item').on('click', function () {
+                var tr = $(this).parents('tr:first');
+                tr.find('.display-mode,.edit-mode').toggle();
+            });
+            $('.delete-item').on('click', function () {
+                if (confirm("Are you sure to delete this contact?")) {
+                    var tr = $(this).parents('tr:first');
+                    var Notes = tr.find('#Id-Edit').text();
+                    var CAT = new Object();
+                    CAT.ID = Notes;
+                    
+                    $.ajax({
+
+                        type: "POST",
+                        url: '/NotesMaster/DeleteContact/',
+                        data: JSON.stringify(CAT),
+                        contentType: "application/json;charset=utf-8",
+                        success: function (data, status, xhr) {
+
+                            window.location.reload();
+                        },
+                        error: function (xhr) {
+
+                            window.location.reload();
+                        }
+                    });
+                }
+
+            });
+
+            $('.save-item').on('click', function () {
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#Id-Edit').text();
+                var Notes = tr.find('#Notes-Edit').val();
+
+
+
+                var cat = new Object();
+                cat.ID = ID;
+                cat.Notes = Notes;
+
+
+
+                $.ajax({
+
+                    type: "POST",
+                    url:'/NotesMaster/NotesUpdate/',
+                    data: JSON.stringify(cat),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+
+                window.location.reload();
+                tr.find('.edit-mode, .display-mode').toggle();
+            });
+
+            $('#BtnCatCreate').on('click', function () {
+
+
+                var Notes = $('#Notes').val();
+
+
+
+
+                var cat = new Object();
+                cat.Notes = Notes; 
+                $.ajax({
+
+                    type: "POST",
+                    url: '/NotesMaster/SaveNotesMaster/',
+                    data: JSON.stringify(cat),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                    }
+                });
+                window.location.reload();
+            });
+        }
+    </script>
+</body>

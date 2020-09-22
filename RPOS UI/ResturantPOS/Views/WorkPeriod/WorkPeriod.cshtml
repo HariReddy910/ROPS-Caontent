@@ -1,0 +1,179 @@
+﻿@model ICollection<RPOS.Model.WorkPeriodStart>
+@{
+    ViewBag.Title = "WorkPeriod";
+}
+<link href="~/Content/WorkStartEnd.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+    /*styles for altering rows*/
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: #EAF2D3;
+        padding: 3px 7px 2px;
+    }
+</style>
+<section class="section-1">
+<h3>Start WorkPeriod To enable POS</h3>
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-md-offset-1 col-xs-12">
+<button id="controls-inner"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i><strong class="button-txt">Start Work Period</strong></button>
+<button id="controls-inner"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i><strong class="button-txt">End Work Period</strong></button>
+</div>
+<div class="col-md-5  col-xs-12">
+        <label class="form-group-label" style="margin-top:25px;">Date Of Work Period : </label>
+        <label class="form-group-label" style="margin-top:25px;">Total Work Time : </label>
+</div>
+</div>
+</div>
+</section>
+
+
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Work Period</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("ID", style: "col2", format: @<text><span id="CurrencyCode" class="display-mode">@item.ID</span>@Html.TextBox("CurrencyCode-Edit", (int)item.ID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Start Time", style: "col2", format: @<text><span id="CurrencyName" class="display-mode">@item.WPStart</span>@Html.TextBox("CurrencyName-Edit", (DateTime)item.WPStart, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("End Time", style: "col2", format: @<text><span id="Rate" class="display-mode">@item.Status</span> @Html.TextBox("Rate-Edit", (string)item.Status, new { @class = "edit-mode form-control" })</text>)
+           ))
+        }
+    }
+</div>
+
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+
+        //delete function 
+
+        //$('.delete-item').on('click', function () {
+        //    if (confirm("Are you sure to delete this contact?")) {
+        //        var tr = $(this).parents('tr:first');
+        //        var CurrencyCode = tr.find('#CurrencyCode-Edit').val();
+        //        var CUR = new Object();
+        //        CUR.CurrencyCode = CurrencyCode;
+        //        $.ajax({
+
+        //            type: "POST",
+        //            url: '/Currency/DeleteContact/',
+        //            data: JSON.stringify(CUR),
+        //            contentType: "application/json;charset=utf-8",
+        //            success: function (data, status, xhr) {
+
+        //                window.location.reload();
+        //            },
+        //            error: function (xhr) {
+
+        //                window.location.reload();
+        //            }
+        //        });
+        //    }
+
+        //});
+
+
+
+        //update function
+        
+        //$('.save-item').on('click', function () {
+        //    var tr = $(this).parents('tr:first');
+        //    var CurrencyCode = tr.find('#CurrencyCode-Edit').val();
+        //    var CurrencyName = tr.find('#CurrencyName-Edit').val();
+        //    var Rate = tr.find('#Rate-Edit').val();
+
+
+
+        //    var CUR = new Object();
+        //    CUR.CurrencyCode = CurrencyCode;
+        //    CUR.CurrencyName = CurrencyName;
+        //    CUR.Rate = Rate;
+
+
+        //    $.ajax({
+
+        //        type: "POST",
+        //        url: '/Currency/CurrencyUpdate/',
+        //        data: JSON.stringify(CUR),
+        //        contentType: "application/json;charset=utf-8",
+        //        success: function (data, status, xhr) {
+
+        //            window.location.reload();
+        //        },
+        //        error: function (xhr) {
+
+        //            window.location.reload();
+        //        }
+        //    });
+
+        //    window.location.reload();
+        //    tr.find('.edit-mode, .display-mode').toggle();
+        //});
+
+
+
+        //save function on clicking the button save the date and time.
+
+        $('#controls-inner').on('click', function () {
+
+
+            var tr = $(this).parents('tr:first');
+            var today_date = DateTime.Now
+
+            var CAT_save = new Object();
+            CAT_save.WPStart = today_date ;
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/WorkPeriodStart/SaveCategory/',
+                data: JSON.stringify(CAT_save),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>

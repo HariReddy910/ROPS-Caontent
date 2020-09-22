@@ -1,0 +1,60 @@
+﻿
+
+/*left side controls for uploading the files*/
+#btnn-inner {
+    height: 50px;
+    width: 50%;
+    margin-left: 78px;
+}
+
+
+/* Right Side controls css */
+#controls-inner {
+    background-color: #66ffb3; /* Green */
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 50%;
+    height: 50px;
+    margin-top: 10px;
+    
+}
+
+    #controls-inner:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    } 
+    
+    
+    .txt {
+        padding-left: 8px;
+    }
+
+
+/*text box css*/
+
+.form-text {
+    width: 100%;
+    margin-top: 3%;
+    
+}
+
+.form-text-label {
+    margin-left: 81px;
+    float: left;
+    width: 24%;
+}
+
+.label-text-box {
+    height: 29px;
+    width: 100%;
+
+}
+.label-text-box:focus {
+    border-color: #4488cc;
+    border-style: solid;
+    border-width: 2px;
+    outline: 0;     
+    }

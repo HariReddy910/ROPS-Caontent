@@ -1,0 +1,193 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    body {
+        background: #ededed;
+    }
+</style>
+
+<div class="container-fluid">
+    <h2 class="rest_info">RESTAURANT INFO</h2>
+</div>
+<div class="">
+    <section id="contact">
+
+        <div class="contact-section">
+            <div class="container">
+                <form>
+                    <div class="col-md-4 form-line">
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Restaurant Name </label>
+                            <input type="text" class="form-control" id="" placeholder=" Restaurant Name ">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Address Line1</label>
+                            <input type="text" class="form-control" id="exampleInputEmail" placeholder="Address Line1">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Address Line2</label>
+                            <input type="text" class="form-control" id="telephone" placeholder=" Address Line2">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Address Line3</label>
+                            <input type="text" class="form-control" id="" placeholder="Address Line3">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Contact No</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Contact No">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Email ID</label>
+                            <input type="email" class="form-control" id="telephone" placeholder="Email ID">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleInputUsername">TIN </label>
+                            <input type="text" class="form-control" id="" placeholder=" TIN ">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Service Tax No</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" placeholder="Service Tax No">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">CIN</label>
+                            <input type="tel" class="form-control" id="telephone" placeholder=" CIN">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Base Currency</label>
+                            <input type="text" class="form-control" id="" placeholder="Base Currency">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Currency Cod</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" placeholder="Currency Cod">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Ticket Footer Message</label>
+                            <input type="tel" class="form-control" id="telephone" placeholder="Ticket Footer Message">
+                        </div>
+
+
+                    </div>
+                    <div class=" col-md-4">
+                        <div class="container">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Upload Image</label>
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-default btn-file">
+                                                Browse… <input type="file" accept="image/png, image/jpeg, image/gif" id="imgInp">
+                                            </span>
+                                        </span>
+                                        <input id='urlname' type="text" class="form-control" readonly>
+                                    </div>
+
+                                    <img id='img-upload' />
+                                </div>
+                                <button id="clear" class="btn btn-default">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-default submit"><i class="fa fa-file" aria-hidden="true"></i>  New</button>
+            </div>
+
+            <div class="col-md-3">
+                <button type="button" class="btn btn-default submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+            </div>
+
+            <div class="col-md-3">
+                <button type="button" class="btn btn-default submit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Update</button>
+            </div>
+
+            <div class="col-md-3">
+                <button type="button" class="btn btn-default submit"><i class="fa fa-trash-o" aria-hidden="true"></i>  Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+   </br>
+<div class="container">
+    <div class="row">
+
+        <table class="table table-hove  rtable">
+            <thead>
+                <tr>
+                    <th>Restaurant Name</th>
+                    <th>Address Line1</th>
+                    <th>Address Line2</td>
+                    <th>Address Line3</th>
+                    <th>Contact No</th>
+                    <th>Email ID</th>
+                    <th>TIN</th>
+                    <th>Service Tax No</td>
+                    <th>CIN</th>
+                    <th>Base Currency</th>
+                    <th>New Users</th>
+                    <th>Ticket Footer Message</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+        </br>
+
+<script>
+    $(document).ready(function () {
+
+        $(document).on('change', '.btn-file :file', function () {
+            var input = $(this),
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [label]);
+        });
+
+        $('.btn-file :file').on('fileselect', function (event, label) {
+
+            var input = $(this).parents('.input-group').find(':text'),
+                log = label;
+
+            if (input.length) {
+                input.val(log);
+            } else {
+                if (log) alert(log);
+            }
+
+        });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img-upload').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp").change(function () {
+            readURL(this);
+        });
+
+        $("#clear").click(function () {
+            $('#img-upload').attr('src', '');
+            $('#urlname').val('');
+        });
+    });
+</script>

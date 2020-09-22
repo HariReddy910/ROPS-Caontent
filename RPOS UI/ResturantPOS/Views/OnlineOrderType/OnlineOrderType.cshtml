@@ -1,0 +1,167 @@
+﻿@model ICollection<ResturantPOS.Models.OnlineOrderType>
+    <head>
+        <link href="~/Content/ResurantInfo.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <h2 style="text-align:center";>OnlineOrderType</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="text" class="col-sm-4 control-label">Resource Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="OrderComanyName" placeholder="Required Resource Name">
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="BtnOOTCreate" class="btn btn-success" style=" margin-left: 3%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+
+
+                      <div style="width:100%;float:left;padding-bottom:50px;">
+                          <h4> OnlineOrderType List</h4>
+                          @{
+                              if (Model != null)
+                              {
+                                  var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                  grid.Pager(WebGridPagerModes.NextPrevious);
+
+                                  @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("Id", style: "col2", format: @<text><span id="Id" class="display-mode">@item.Id</span>@Html.TextBox("Id-Edit", (int)item.Id, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("OrderComanyName", style: "col2", format: @<text><span id="OrderComanyName" class="display-mode">@item.OrderComanyName</span>@Html.TextBox("OrderComanyName-Edit", (string)item.OrderComanyName, new { @class = "edit-mode form-control" })</text>),
+           
+           grid.Column("", style: "col1", format: @<text>
+                      <div style="padding-left:20px;">
+                          <button class="btn btn-default edit-item display-mode" id="@item.Id">Edit</button>
+                          <button class="btn btn-default display-mode delete-item" id="@item.Id">Delete</button>
+                          <button class="btn btn-default save-item edit-mode" id="@item.Id">Save</button>
+                          <button class="btn btn-default cancel-item edit-mode" id="@item.Id">Cancel</button>
+                      </div>
+                  </text>)))
+                              }
+                          }
+                      </div>
+                      <script type="text/javascript">
+                          initialize();
+
+                          function initialize() {
+
+                              $('.edit-mode').hide();
+
+                              $('.edit-item').on('click', function () {
+                                  $('.edit-mode').hide();
+                                  $('.delete-mode').hide();
+                                  $('.display-mode').show();
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+                              $('.cancel-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  tr.find('.display-mode,.edit-mode').toggle();
+                              });
+                              $('.delete-item').on('click', function () {
+                                  if (confirm("Are you sure to delete this contact?")) {
+                                      var tr = $(this).parents('tr:first');
+                                      var ID = tr.find('#Id-Edit').val();
+                                      var OOT = new Object();
+                                      OOT.Id = ID;
+                                      $.ajax({
+
+                                          type: "POST",
+                                          url: '/OnlineOrderType/DeleteContact/',
+                                          data: JSON.stringify(OOT),
+                                          contentType: "application/json;charset=utf-8",
+                                          success: function (data, status, xhr) {
+
+                                              window.location.reload();
+                                          },
+                                          error: function (xhr) {
+
+                                              window.location.reload();
+                                          }
+                                      });
+                                  }
+
+                              });
+
+                              $('.save-item').on('click', function () {
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Id-Edit').val();
+                                  var OrderComanyName = tr.find('#OrderComanyName-Edit').val();
+                                  
+                                  var OOT = new Object();
+                                  OOT.Id = ID;
+                                  OOT.OrderComanyName = OrderComanyName;
+                                  
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/OnlineOrderType/OrderComanyNameUpdate/',
+                                      data: JSON.stringify(OOT),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                          window.location.reload();
+                                      }
+                                  });
+
+                                  window.location.reload();
+                                  tr.find('.edit-mode, .display-mode').toggle();
+                              });
+
+                              $('#BtnOOTCreate').on('click', function () {
+
+                                  var tr = $(this).parents('tr:first');
+                                  var ID = tr.find('#Id').val();
+                                  var OrderComanyNameins = $("#OrderComanyName").val();
+                                 
+
+
+                                  var IdIns = new Object();
+                                   
+                                  IdIns.OrderComanyName = OrderComanyNameins;
+                            
+
+
+                                  $.ajax({
+
+                                      type: "POST",
+                                      url: '/OnlineOrderType/SaveOnlineOrderType/',
+                                      data: JSON.stringify(IdIns),
+                                      contentType: "application/json;charset=utf-8",
+                                      success: function (data, status, xhr) {
+
+                                          window.location.reload();
+                                      },
+                                      error: function (xhr) {
+
+                                      }
+                                  });
+                                  window.location.reload();
+                              });
+                          }
+                      </script>

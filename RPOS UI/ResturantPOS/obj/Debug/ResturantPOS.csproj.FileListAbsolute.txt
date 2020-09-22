@@ -1,0 +1,878 @@
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\ApplicationInsights.config
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\csc.exe
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\csc.exe.config
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\csc.rsp
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\csi.exe
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\csi.rsp
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\System.AppContext.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\vbc.exe
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\vbc.exe.config
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\vbc.rsp
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\ResturantPOS.dll.config
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\ResturantPOS.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\ResturantPOS.pdb
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Antlr3.Runtime.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Web.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Newtonsoft.Json.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Net.Http.Formatting.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Helpers.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Http.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Http.WebHost.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Mvc.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Optimization.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Razor.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\WebGrease.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Newtonsoft.Json.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Net.Http.Formatting.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Helpers.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Http.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Http.WebHost.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Mvc.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Optimization.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.Razor.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Antlr3.Runtime.pdb
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Web.xml
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.dll
+c:\users\yatesh\documents\visual studio 2017\Projects\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.pdb
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\ApplicationInsights.config
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\csc.exe
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\csc.exe.config
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\csc.rsp
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\csi.exe
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\csi.rsp
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\System.AppContext.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\vbc.exe
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\vbc.exe.config
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\vbc.rsp
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\ResturantPOS.dll.config
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\ResturantPOS.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\ResturantPOS.pdb
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Antlr3.Runtime.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Web.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Newtonsoft.Json.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Net.Http.Formatting.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Helpers.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Http.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Http.WebHost.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Mvc.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Optimization.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Razor.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\WebGrease.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Newtonsoft.Json.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Net.Http.Formatting.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Helpers.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Http.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Http.WebHost.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Mvc.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Optimization.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.Razor.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Antlr3.Runtime.pdb
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Web.xml
+D:\ResturantPOS\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+D:\ResturantPOS\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.dll
+D:\ResturantPOS\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.pdb
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\ApplicationInsights.config
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\csc.exe
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\csc.exe.config
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\csc.rsp
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\csi.exe
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\csi.rsp
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\System.AppContext.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\vbc.exe
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\vbc.exe.config
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\vbc.rsp
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\ResturantPOS.dll.config
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\ResturantPOS.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\ResturantPOS.pdb
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Antlr3.Runtime.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Web.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Newtonsoft.Json.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Net.Http.Formatting.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Helpers.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Http.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Http.WebHost.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Mvc.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Optimization.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Razor.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\WebGrease.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Newtonsoft.Json.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Net.Http.Formatting.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Helpers.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Http.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Http.WebHost.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Mvc.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Optimization.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.Razor.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Antlr3.Runtime.pdb
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\bin\Microsoft.AI.Web.xml
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.dll
+D:\RestaurentPOS_GitRepo\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.pdb
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\ApplicationInsights.config
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\csc.exe
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\csc.exe.config
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\csc.rsp
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\csi.exe
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\csi.rsp
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\System.AppContext.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\vbc.exe
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\vbc.exe.config
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\vbc.rsp
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\ResturantPOS.dll.config
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\ResturantPOS.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\ResturantPOS.pdb
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Antlr3.Runtime.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.Web.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Newtonsoft.Json.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Net.Http.Formatting.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Helpers.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Http.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Http.WebHost.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Mvc.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Optimization.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Razor.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.WebPages.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\WebGrease.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Newtonsoft.Json.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Net.Http.Formatting.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Helpers.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Http.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Http.WebHost.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Mvc.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Optimization.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.Razor.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.WebPages.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Antlr3.Runtime.pdb
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\bin\Microsoft.AI.Web.xml
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\obj\Debug\ResturantPOS.dll
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\obj\Debug\ResturantPOS.pdb
+E:\RestaurentPOS_Web\RestaurentPOS_UI\restaurentpos_ui\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\Admin\Desktop\UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\Admin\Desktop\UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\Admin\Desktop\UI\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Admin\Desktop\Deena\UI\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\Admin\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\APYN06\Desktop\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\WebGrease.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+D:\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\APYN08\Desktop\Api\Deena\Deena\BackUP..19.06\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csproj.CoreCompileInputs.cache
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\ApplicationInsights.config
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\csc.exe
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\csc.exe.config
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\csc.rsp
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\csi.exe
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\csi.rsp
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\System.AppContext.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\vbc.exe.config
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\vbc.rsp
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\ResturantPOS.dll.config
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\ResturantPOS.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\ResturantPOS.pdb
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Helpers.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Http.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Mvc.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Optimization.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Razor.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.WebPages.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\WebGrease.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Newtonsoft.Json.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Net.Http.Formatting.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Helpers.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Http.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Http.WebHost.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Mvc.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Optimization.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.Razor.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.WebPages.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\System.Web.WebPages.Razor.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Antlr3.Runtime.pdb
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\bin\Microsoft.AI.Web.xml
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.csproj.CoreCompileInputs.cache
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.dll
+C:\Users\APYN08\Desktop\ROPS Caontent\RPOS UI\ResturantPOS\obj\Debug\ResturantPOS.pdb

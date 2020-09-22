@@ -1,0 +1,440 @@
+﻿
+@model ICollection<ResturantPOS.Models.Supplier>
+
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <!--web grid styles starts-->
+    <style type="text/css">
+        /*styles for altering rows*/
+        .webgrid-row-style {
+            padding: 3px 7px 2px;
+        }
+
+        .webgrid-alternating-row {
+            background-color: #EAF2D3;
+            padding: 3px 7px 2px;
+        }
+    </style>
+
+    <h2 style="text-align:center;"> Supplier Entry</h2>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="margin-bottom:10%;">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Supplier ID</label>
+                            <div class="col-sm-8">
+ 
+                                <input type="text" class="form-control" id="SupplierID" value="@ViewBag.SupplierId" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="Name" placeholder="Required Supplier Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Address</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="Address" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">City</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="City" placeholder="Required City Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">State</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" id="State">
+                                    <option>Telangana</option>
+                                    <option>Andhrapradesh</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Zip Code</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="ZipCode" placeholder="Required PIN Code">
+                            </div>
+                        </div>
+
+                        
+
+                        <button type="button" class="btn btn-success" id="BtnCatCreate" style="margin-left: 35%;"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Save.</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">ContactNo</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="ContactNo" placeholder="Required Contact No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">EmailID</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="EmailID" placeholder="Required Email ID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">TIN</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="TIN" placeholder="Required TIN No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">STNo</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="STNo" placeholder="Required ST No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">CST</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="CST" placeholder="Required CST No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">PAN</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="PAN" placeholder="Required PAN No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Opening Balance</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="OpeningBalance">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">OpeningBalanceType</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" id="OpeningBalanceType">
+                                    <option>CR</option>
+                                    <option>DR</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Remarks</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="Remarks" rows="2"></textarea>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Account Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="AccountName" placeholder="Required Account Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Account Number</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="AccountNumber" placeholder="Required Account No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Bank</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="Bank" placeholder="Required Bank Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">Branch</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="Branch" placeholder="Required Branch Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputtext3" class="col-sm-4 control-label">IFSCCode</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="IFSCCode" placeholder="Required IFSC Code">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+    </body>
+</html>
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Supplier</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle:"table table-responsive table-bordered  "  ,
+
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row" ,
+            selectedRowStyle: "webgrid-row-style Style"  ,
+            columns:
+             grid.Columns(
+                  grid.Column("ID", style: "col2", format: @<text><span id="ID" class="display-mode">@item.ID</span>@Html.TextBox("ID-Edit", (int)item.ID, new { @class = "edit-mode form-control" })</text>),
+
+            grid.Column("Supplier ID", style: "col2", format: @<text><span id="SupplierID" class="display-mode">@item.SupplierID</span>@Html.TextBox("SupplierID-Edit", (string)item.SupplierID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Name", style: "col2", format: @<text><span id="Name" class="display-mode">@item.Name</span>@Html.TextBox("Name-Edit", (string)item.Name, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Address", style: "col2", format: @<text><span id="Address" class="display-mode">@item.Address</span> @Html.TextBox("Address-Edit", (string)item.Address, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("City", style: "col2", format: @<text><span id="City" class="display-mode">@item.City</span>@Html.TextBox("City-Edit", (string)item.City, new { @class = "edit-mode form-control" })</text>),
+           grid.Column("State", style: "col2", format: @<text><span id="State" class="display-mode">@item.State</span>@Html.DropDownList("State-Edit", new SelectList(ViewBag.State, "Value", "Text", (string)item.State), new { @class = "edit-mode form-control" }) </text>),
+               grid.Column("Zip Code", style: "col2", format: @<text><span id="ZipCode" class="display-mode">@item.ZipCode</span> @Html.TextBox("ZipCode-Edit", (string)item.ZipCode, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("ContactNo", style: "col2", format: @<text><span id="ContactNo" class="display-mode">@item.ContactNo</span>@Html.TextBox("ContactNo-Edit", (string)item.ContactNo, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("EmailID", style: "col2", format: @<text><span id="EmailID" class="display-mode">@item.EmailID</span>@Html.TextBox("EmailID-Edit", (string)item.EmailID, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("TIN", style: "col2", format: @<text><span id="TIN" class="display-mode">@item.TIN</span> @Html.TextBox("TIN-Edit", (string)item.TIN, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("STNo", style: "col2", format: @<text><span id="STNo" class="display-mode">@item.STNo</span>@Html.TextBox("STNo-Edit", (string)item.STNo, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("CST", style: "col2", format: @<text><span id="CST" class="display-mode">@item.CST</span>@Html.TextBox("CST-Edit", (string)item.CST, new { @class = "edit-mode form-control" })</text>),
+           grid.Column("PAN", style: "col2", format: @<text><span id="PAN" class="display-mode">@item.PAN</span> @Html.TextBox("PAN-Edit", (string)item.PAN, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Opening Balance", style: "col2", format: @<text><span id="OpeningBalance" class="display-mode">@item.OpeningBalance</span>@Html.TextBox("OpeningBalance-Edit", (decimal)item.OpeningBalance, new { @class = "edit-mode form-control" })</text>),
+                 grid.Column("OpeningBalanceType", style: "col2", format: @<text><span id="OpeningBalanceType" class="display-mode">@item.OpeningBalanceType</span>@Html.DropDownList("OpeningBalanceType-Edit", new SelectList(ViewBag.OpeningBalanceType, "Value", "Text", (string)item.OpeningBalanceType), new { @class = "edit-mode form-control" }) </text>),
+
+            grid.Column("Remarks", style: "col2", format: @<text><span id="Remarks" class="display-mode">@item.Remarks</span>@Html.TextBox("Remarks-Edit", (string)item.Remarks, new { @class = "edit-mode form-control" })</text>),
+              grid.Column("Account Name", style: "col2", format: @<text><span id="AccountName" class="display-mode">@item.AccountName</span> @Html.TextBox("AccountName-Edit", (string)item.AccountName, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("AccountNumber", style: "col2", format: @<text><span id="AccountNumber" class="display-mode">@item.AccountNumber</span>@Html.TextBox("AccountNumber-Edit", (string)item.AccountNumber, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("Bank", style: "col2", format: @<text><span id="Bank" class="display-mode">@item.Bank</span>@Html.TextBox("Bank-Edit", (string)item.Bank, new { @class = "edit-mode form-control" })</text>),
+             grid.Column("Branch", style: "col2", format: @<text><span id="Branch" class="display-mode">@item.Branch</span>@Html.TextBox("Branch-Edit", (string)item.Branch, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("IFSCCode", style: "col2", format: @<text><span id="IFSCCode" class="display-mode">@item.IFSCCode</span>@Html.TextBox("IFSCCode-Edit", (string)item.IFSCCode, new { @class = "edit-mode form-control" })</text>),
+
+           grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.ID">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.ID">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.ID">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.ID">Cancel</button>
+
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#SupplierID-Edit').val();
+                var Sup = new Object();
+                Sup.SupplierID = ID;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/Supplier/DeleteSupplier/',
+                    data: JSON.stringify(Sup),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#ID-Edit').val();
+            var SupplierID = tr.find('#SupplierID-Edit').val();
+            var Name = tr.find('#Name-Edit').val();
+            var Address = tr.find('#Address-Edit').val();
+            var City = tr.find('#City-Edit').val();
+            var State = tr.find('#State-Edit').val();
+            var ZipCode = tr.find('#ZipCode-Edit').val();
+            var ContactNo = tr.find('#ContactNo-Edit').val();
+            var EmailID = tr.find('#EmailID').val();
+            var TIN = tr.find('#TIN-Edit').val();
+            var STNo = tr.find('#STNo-Edit').val();
+            var CST = tr.find('#CST-Edit').val();
+            var PAN = tr.find('#PAN-Edit').val();
+            var OpeningBalance = tr.find('#OpeningBalance-Edit').val();
+            var OpeningBalanceType = tr.find('#OpeningBalanceType-Edit').val();
+            var Remarks = tr.find('#Remarks-Edit').val();
+            var AccountName = tr.find('#AccountName-Edit').val();
+            var AccountNumber = tr.find('#AccountNumber-Edit').val();
+            var Bank = tr.find('#Bank-Edit').val();
+            var IFSCCode = tr.find('#IFSCCode-Edit').val();
+
+
+            var SUP = new Object();
+            SUP.ID = ID;
+            SUP.SupplierID = SupplierID;
+            SUP.Name = Name;
+            SUP.Address = Address;
+            SUP.City = City;
+            SUP.State = State;
+            SUP.ZipCode = ZipCode;
+            SUP.ContactNo = ContactNo;
+            SUP.EmailID = EmailID;
+            SUP.TIN = TIN;
+            SUP.STNo = STNo;
+            SUP.CST = CST;
+            SUP.PAN = PAN;
+            SUP.OpeningBalance = OpeningBalance;
+            SUP.OpeningBalanceType = OpeningBalanceType;
+            SUP.Remarks = Remarks;
+            SUP.AccountName = AccountName;
+            SUP.AccountNumber = AccountNumber;
+            SUP.Bank = Bank;
+            SUP.IFSCCode = IFSCCode;
+
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/Supplier/SupplierUpdate/',
+                data: JSON.stringify(SUP),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#BtnCatCreate').on('click', function () {
+
+            var tr = $(this).parents('tr:first');
+            //var ID = tr.ID("ID").val();
+            var SupplierIDins = $('#SupplierID').val();
+            var Nameins = $("#Name").val();
+            var Addressins = $("#Address").val();
+            var Cityins = $("#City").val();
+            var Stateins = $("#State").val();
+            var ZipCodeins = $("#ZipCode").val();
+            var ContactNoins = $("#ContactNo").val();
+            var EmailIDins = $('#EmailID').val();
+            var TINins = $("#TIN").val();
+            var STNoins = $("#STNo").val();
+            var CSTins = $("#CST").val();
+            var PANins = $("#PAN").val();
+            var OpeningBalanceins = $("#OpeningBalance").val();
+            var OpeningBalanceTypeins = $("#OpeningBalanceType").val();
+            var Remarksins = $("#Remarks").val();
+            var AccountNameins = $("#AccountName ").val();
+            var AccountNumberins = $("#AccountNumber").val();
+            var Bankins = $("#Bank").val();
+            var IFSCCodeins = $("#IFSCCode ").val();
+            
+
+
+            var SupIns = new Object();
+            //SupIns.ID = ID;
+            SupIns.SupplierID = SupplierIDins;
+            SupIns.Name = Nameins;
+            SupIns.Address = Addressins;
+            SupIns.City = Cityins;
+            SupIns.State = Stateins;
+            SupIns.ZipCode = ZipCodeins;
+            SupIns.ContactNo = ContactNoins;
+            SupIns.EmailID = EmailIDins;
+            SupIns.TIN = TINins;
+            SupIns.STNo = STNoins;
+            SupIns.CST = CSTins;
+            SupIns.PAN = PANins;
+            SupIns.OpeningBalance = OpeningBalanceins;
+            SupIns.OpeningBalanceType = OpeningBalanceTypeins;
+            SupIns.Remarks = Remarksins;
+            SupIns.AccountName = AccountNameins;
+            SupIns.AccountNumber = AccountNumberins;
+            SupIns.Bank = Bankins;
+            SupIns.IFSCCode = IFSCCodeins;
+            
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/Supplier/SaveSupplier/',
+                data: JSON.stringify(SupIns),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

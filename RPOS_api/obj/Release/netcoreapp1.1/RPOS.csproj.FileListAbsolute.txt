@@ -1,0 +1,9 @@
+D:\Projects\RPOS-master\RPOS\bin\Release\netcoreapp1.1\RPOS.deps.json
+D:\Projects\RPOS-master\RPOS\bin\Release\netcoreapp1.1\RPOS.runtimeconfig.json
+D:\Projects\RPOS-master\RPOS\bin\Release\netcoreapp1.1\RPOS.runtimeconfig.dev.json
+D:\Projects\RPOS-master\RPOS\bin\Release\netcoreapp1.1\RPOS.dll
+D:\Projects\RPOS-master\RPOS\bin\Release\netcoreapp1.1\RPOS.pdb
+D:\Projects\RPOS-master\RPOS\obj\Release\netcoreapp1.1\RPOS.AssemblyInfo.cs
+D:\Projects\RPOS-master\RPOS\obj\Release\netcoreapp1.1\RPOS.dll
+D:\Projects\RPOS-master\RPOS\obj\Release\netcoreapp1.1\RPOS.pdb
+D:\Projects\RPOS-master\RPOS\obj\Release\netcoreapp1.1\RPOS.csprojResolveAssemblyReference.cache

@@ -1,0 +1,239 @@
+﻿
+@model ICollection<ResturantPOS.Models.SMSSetting>
+
+
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<!--web grid styles starts-->
+<style type="text/css">
+    /*styles for altering rows*/
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: #EAF2D3;
+        padding: 3px 7px 2px;
+    }
+</style>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .EmailSetting-Container {
+            width: 500px;
+        }
+
+        .button {
+            background-color: #66ffb3; /* Green */
+            border: none;
+            color: #09090a;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .button1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        div {
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 21px;
+        }
+    </style>
+
+</head>
+<body style="background-color: #f2f2f2 ;text-align: center;
+    margin-top:-74px;">
+    <div>
+        <h2>SMSSettings</h2><br /><br />
+        <label>API URL:</label> <input type="text" id="APIURL" name="API URL" style="width: 100%"><br /><br />
+       <form action=""style="margin-left: -263px;">
+            <input type="checkbox"  id="IsDeafult" name="default" value="Bike">Is Deafult<br>
+            <input type="checkbox"  id="IsEnabled" name="enabled" value="Car">Is Enabled
+        </form>
+                                                                                
+
+    </div>
+    <button class="button button1"><i class="fa fa-sticky-note-o"></i>NEW</button>
+    <button class="button button1"  id="BtnCatCreate"><i class="fa fa-floppy-o" aria-hidden="true"></i>SAVE</button>
+    <button class="button button1"><i class="fa fa-cloud-upload" aria-hidden="true"></i>UPDATE</button>
+    <button class="button button1"><i class="fa fa-trash-o" aria-hidden="true"></i>DELETE</button>
+
+</body>
+
+</html>
+<div style="width:100%;float:left;padding-bottom:50px;">
+    <h4> Category List</h4>
+    @{
+        if (Model != null)
+        {
+            var grid = new WebGrid(Model, canPage: true, rowsPerPage: 50, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+            grid.Pager(WebGridPagerModes.NextPrevious);
+
+            @grid.GetHtml(tableStyle: "table table-responsive table-bordered",
+            headerStyle: "",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-row-style",
+            columns:
+             grid.Columns(
+            grid.Column("Id", style: "col2", format: @<text><span id="Id" class="display-mode">@item.Id</span>@Html.TextBox("Id-Edit", (int)item.Id, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("APIURL", style: "col2", format: @<text><span id="APIURL" class="display-mode">@item.APIURL</span>@Html.TextBox("APIURL-Edit", (string)item.APIURL, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("IsDeafult", style: "col2", format: @<text><span id="IsDeafult" class="display-mode">@item.IsDefault</span> @Html.TextBox("IsDeafult-Edit", (string)item.IsDefault, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("IsEnabled", style: "col2", format: @<text><span id="IsEnabled" class="display-mode">@item.IsEnabled</span>@Html.TextBox("IsEnabled-Edit", (string)item.IsEnabled, new { @class = "edit-mode form-control" })</text>),
+            grid.Column("", style: "col1", format: @<text>
+                    <div style="padding-left:20px;">
+                        <button class="btn btn-default edit-item display-mode" id="@item.Id">Edit</button>
+                        <button class="btn btn-default display-mode delete-item" id="@item.Id">Delete</button>
+                        <button class="btn btn-default save-item edit-mode" id="@item.Id">Save</button>
+                        <button class="btn btn-default cancel-item edit-mode" id="@item.Id">Cancel</button>
+                    </div>
+        </text>)))
+        }
+    }
+</div>
+<script type="text/javascript">
+    initialize();
+
+    function initialize() {
+
+        $('.edit-mode').hide();
+
+        $('.edit-item').on('click', function () {
+            $('.edit-mode').hide();
+            $('.delete-mode').hide();
+            $('.display-mode').show();
+            var tr = $(this).parents('tr:first');
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+        $('.cancel-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            tr.find('.display-mode,.edit-mode').toggle();
+        });
+        $('.delete-item').on('click', function () {
+            if (confirm("Are you sure to delete this contact?")) {
+                var tr = $(this).parents('tr:first');
+                var ID = tr.find('#Id-Edit').val();
+                var SMS = new Object();
+                SMS.Id = ID;
+                $.ajax({
+
+                    type: "POST",
+                    url: '/SMSSetting/DeleteSMSSetting/',
+                    data: JSON.stringify(SMS),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data, status, xhr) {
+
+                        window.location.reload();
+                    },
+                    error: function (xhr) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('.save-item').on('click', function () {
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#Id-Edit').val();
+            var APIURL = tr.find('#APIURL-Edit').val();
+            var IsDeafult = tr.find('#IsDeafult-Edit').val();
+            var IsEnabled = tr.find('#IsEnabled-Edit').val();
+           
+
+            var SETT = new Object();
+            SETT.Id = ID;
+            SETT.APIURL = APIURL;
+            SETT.IsDefault = IsDeafult;
+            SETT.IsEnabled = IsEnabled;
+            
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/SMSSetting/SMSSettingUpdate/',
+                data: JSON.stringify(SETT),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                    window.location.reload();
+                }
+            });
+
+            window.location.reload();
+            tr.find('.edit-mode, .display-mode').toggle();
+        });
+
+        $('#BtnCatCreate').on('click', function () {
+
+            var tr = $(this).parents('tr:first');
+            var ID = tr.find('#Id').val();
+            var APIURLins = $("#APIURL").val();
+            var IsDeafultins = $("#IsDeafult").val();
+            var IsEnabledins = $("#IsEnabled").val();
+           
+
+
+            var sms = new Object();
+            sms.Id = ID;
+            sms.APIURL = APIURLins;
+            sms.IsDefault = IsDeafultins;
+            sms.IsEnabled = IsEnabledins;
+            
+
+
+            $.ajax({
+
+                type: "POST",
+                url: '/SMSSetting/SaveSMSSetting/',
+                data: JSON.stringify(sms),
+                contentType: "application/json;charset=utf-8",
+                success: function (data, status, xhr) {
+
+                    window.location.reload();
+                },
+                error: function (xhr) {
+
+                }
+            });
+            window.location.reload();
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
